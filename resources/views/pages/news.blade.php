@@ -28,10 +28,10 @@
       <li>
       <article class="article uk-clearfix">
       <div class="thumb img-flash">
-      <a class="image img-cover" href="" title="{{$val->name}}"><img src="data/news/{{$val->img}}" alt="{{$val->name}}"></a>
+      <a class="image img-cover" href="{{$val->category->slug}}/{{$val->slug}}" title="{{$val->name}}"><img src="data/news/{{$val->img}}" alt="{{$val->name}}"></a>
       </div>
       <div class="info">
-      <h2 class="title"><a href="" title="">{{$val->name}}</a></h2>
+      <h2 class="title"><a href="{{$val->category->slug}}/{{$val->slug}}" title="">{{$val->name}}</a></h2>
       <div class="meta">
         <i class="fa fa-user"></i> {{$val->user->name}}
         <i class="fa fa-clock-o"></i> {{date('d/m/Y',strtotime($val->updated_at))}}

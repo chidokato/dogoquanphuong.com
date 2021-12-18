@@ -55,7 +55,7 @@ class c_menu extends Controller
         $menu->user_id = Auth::User()->id;
         $menu->name = $Request->name;
         $menu->sku = str_random(8);
-        $menu->slug = $Request->slug;
+        $menu->slug = changeTitle($Request->name);
         $menu->content = $Request->content;
         $menu->sort_by = $Request->sort_by;
         $menu->parent = $Request->parent;

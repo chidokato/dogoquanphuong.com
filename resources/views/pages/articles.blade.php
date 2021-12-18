@@ -23,20 +23,13 @@
               <div class="uk-grid uk-grid-medium">
                 <div class="uk-width-large-1-2">
                   <div class="">
-                    <div class="slider">
+                    <div class="">
                       <ul id="image-gallery" class="gallery list-unstyled cS-hidden">
-                        <li data-thumb="data/product/{{$articles->img}}"> 
+                        <li > 
                           <a class="image img-cover" href="data/product/{{$articles->img}}" data-uk-lightbox="{group:'gallerys'}">
                             <img src="data/product/{{$articles->img}}" />
                           </a>
                         </li>
-                        <!-- @foreach($articles->images as $img)
-                        <li data-thumb="data/product/{{$img->img}}"> 
-                          <a class="image img-cover">
-                            <img src="data/product/{{$img->img}}" />
-                          </a>
-                        </li>
-                        @endforeach -->
                       </ul>
                     </div>
                   </div>

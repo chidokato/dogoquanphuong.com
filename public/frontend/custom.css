@@ -4,7 +4,8 @@
 .float_left{float: left;} .float_right{float: right;}
 
 /*header*/
-.logo img{float: left; height: 60px; margin: 5px;}
+.logo img{width: 85%; margin: 5px;}
+.logo a{text-align: center;}
 .main-nav>.main-menu>li>a{padding: 15px; font-weight: bold;color: #fff;}
 
 .header1 .main-nav>.main-menu>li>a{padding: 12px 20px;}
@@ -51,12 +52,12 @@
 
 /*section3*/
 .homes-tit-1{display: flex;justify-content: space-between;align-content: center; border-bottom: 1px solid #ddd; margin-bottom: 20px;}
-.homes-tit-1 h2{ font-size: 1.6rem; font-weight: bold; color: #0a5597; margin-bottom: 0px; border-bottom: 2px solid #ddd; padding-bottom: 5px;}
-.homes-tit-1 a{ font-weight: bold; color: #0a5597; font-size: 1.3rem;}
+.homes-tit-1 h2{ font-size: 1.6rem; font-weight: bold; color: #65462b; margin-bottom: 0px; border-bottom: 2px solid #ddd; padding-bottom: 5px;}
+.homes-tit-1 a{ font-weight: bold; color: #65462b; font-size: 1.3rem;}
 /*section3*/
 
 /*section6*/
-.section6 .thumb a{ border-radius: 1000px; border: 9px solid #0a5597; }
+.section6 .thumb a{ border-radius: 1000px; border: 9px solid #65462b; }
 .section6 h3{ text-align: center; margin-top: 10px; font-size: 1.4rem;  }
 /*section6*/
 

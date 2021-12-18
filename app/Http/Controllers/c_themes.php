@@ -97,13 +97,6 @@ class c_themes extends Controller
 
     public function postedit(Request $Request,$id)
     {
-        if ($Request->note == 'logo' || $Request->note == 'logo ân bản') {
-            $this->validate($Request,[
-                'note' => 'unique:themes,note',
-            ],[
-                'note.unique'=>'Logo phải là duy nhất',
-            ] );
-        }
         $themes = themes::find($id);
         $themes->name = $Request->name;
         $themes->title = $Request->title;

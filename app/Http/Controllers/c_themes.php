@@ -106,7 +106,7 @@ class c_themes extends Controller
         }
         $themes = themes::find($id);
         $themes->name = $Request->name;
-        $themes->tit = $Request->tit;
+        $themes->title = $Request->title;
         $themes->note = $Request->note;
         $themes->link = $Request->link;
         $themes->content = $Request->content;

@@ -98,13 +98,11 @@
                         </td>
                         <td>{{$val->user->name}}</td>
                         <td>
-                            @if($val->sort_by==1) Product @endif
-                            @if($val->sort_by==2) News @endif
-                            @if($val->sort_by==3) Pages @endif
+                            {{$val->classify}}
                         </td>
                         <td class="date">{{date('d/m/Y',strtotime($val->created_at))}} <sup title="Sửa lần cuối: {{date('d/m/Y',strtotime($val->updated_at))}}"><i class="fa fa-question-circle-o" aria-hidden="true"></i></sup> </td>
                         <td>
-                            <!-- <a href="admin/menu/double/{{$val->id}}" class="mr-2"><i class="far fa-copy"></i></a> -->
+                            <a href="admin/menu/double/{{$val->id}}" class="mr-2"><i class="far fa-copy"></i></a>
                             <a href="admin/menu/edit/{{$val->id}}" class="mr-2"><i class="fas fa-edit" aria-hidden="true"></i></a>
                             <a onclick="dell()" href="admin/menu/delete/{{$val->id}}"><i class="fas fa-trash-alt"></i></a>
                         </td>

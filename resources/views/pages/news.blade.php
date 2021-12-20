@@ -38,7 +38,7 @@
         <i class="fa fa-folder-open"></i> {{$val->category->name}}
         <i class="fa fa-eye"></i> {{$val->hist}} view
       </div>
-      <div class="description lib-line-4">Berriver Jardin là dự án bất động sản hot nhất khu vực phía đông Hà Nội vào năm 2020. Bởi sở hữu vị trí đắc địa tại đường Nguyễn Văn Cừ và nằm liền kề với phố cổ ...</div>
+      <div class="description lib-line-4">{{$val->detail}}</div>
       </div>
       </article><!-- .article-1 -->
       </li>

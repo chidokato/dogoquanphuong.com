@@ -24,10 +24,12 @@
             </section><!-- .panel-body -->
           </section><!-- .prd-detail -->
           <section>
-            <header class="panel-head homes-tit-1">
-              <h1 style="font-weight: 100;">{{$articles->name}}</h1>
-            </header>
+            
             <div class="content">
+              <header class="panel-head homes-tit-1">
+                <h1>{{$articles->name}}</h1>
+              </header>
+              <p><i>{!!$articles->detail!!}</i></p>
               {!!$articles->content!!}
             </div>
           </section>

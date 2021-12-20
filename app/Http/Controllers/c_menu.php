@@ -12,7 +12,7 @@ class c_menu extends Controller
 {
     public function getlist()
     {
-        $menu = menu::orderBy('view','asc')->paginate(20);
+        $menu = menu::orderBy('view','asc')->get();
     	return view('admin.menu.list',[
             'menu'=>$menu,
         ]);
@@ -84,7 +84,7 @@ class c_menu extends Controller
     public function double($id)
     {
         $data = menu::findOrFail($id);
-        $menu = menu::where('sort_by',$data['sort_by'])->select('id','name','parent')->get();
+        $menu = menu::select('id','name','parent')->get();
         return view('admin.menu.double',['data'=>$data, 'menu'=>$menu]);
     }
 

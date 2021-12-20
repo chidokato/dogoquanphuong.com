@@ -1,4 +1,4 @@
-*{font-family: tahoma !important;}
+*{font-family: arial !important;}
 
 /*custom css*/
 .float_left{float: left;} .float_right{float: right;}
@@ -102,7 +102,8 @@
  width: 100%;
  left: 95%;
  top: 0;
- display: none;box-shadow: 2px 0 5px #c4c4c4;
+ display: none;
+ box-shadow: 0px 0px 6px 2px #c4c4c4;
 }
 #menu li:hover .sub-menu {
  display: block;
@@ -140,6 +141,8 @@
 .ditail-img li img{
 	height: 500px;
 }
+.content h1{ font-weight: bold; font-size: 1.6rem }
+.content h2{ font-weight: 200; font-size: 1.2rem }
 
 @-webkit-keyframes fadeEffect {
   from {opacity: 0;}

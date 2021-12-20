@@ -12,7 +12,7 @@ class c_category extends Controller
 {
     public function getlist()
     {
-        $category = category::orderBy('view','asc')->paginate(20);
+        $category = category::orderBy('view','asc')->get();
     	return view('admin.category.list',[
             'category'=>$category,
         ]);

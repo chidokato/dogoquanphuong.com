@@ -151,6 +151,7 @@ Route::group(['prefix'=>'admin','middleware'=>'adminlogin'],function(){
 	Route::group(['prefix'=>'ajax'],function(){
 		Route::get('sort_by/{id}','c_ajax@sortby'); // category
 		Route::get('update_status_category/{id}','c_ajax@update_status_category');
+		Route::get('update_home_category/{id}','c_ajax@update_home_category');
 		Route::get('update_status_menu/{id}','c_ajax@update_status_menu');
 		Route::get('updateview/{id}','c_ajax@updateview'); // update view menu/list
 

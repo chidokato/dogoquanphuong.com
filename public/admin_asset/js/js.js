@@ -113,6 +113,20 @@ $(document).ready(function(){
     });
 }); // update status
 
+$(document).ready(function(){
+    $("input#home").click(function(){
+        var home = $(this).is(':checked');
+        var id = $(this).parents('#category').find('input[id="id"]').val();
+        // alert(status);
+        $.ajax({
+            url:  'admin/ajax/update_home_category/'+id, type: 'GET', cache: false, data: {
+                "home":home,
+                "id":id
+            },
+        });
+    });
+}); // update home
+
 // category
 
 // nhập hang

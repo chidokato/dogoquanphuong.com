@@ -90,7 +90,7 @@ if(isset($data)){
             <div class="card-body">
                 <div class="form-group">
                     <label>Category</label>
-                    <select name='category_id' class="form-control kt_select2_1">
+                    <select name='category_id' class="form-control kt_select2_1 select2">
                         <option value="">-- Select --</option>
                         @if(isset($data))
                         <?php addeditcat ($category,0, $str='',$data['category_id']) ?>

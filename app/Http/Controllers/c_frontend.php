@@ -39,11 +39,13 @@ class c_frontend extends Controller
     {
         $active = '';
         $slider = themes::where('note','Slider')->get();
-        $articles = articles::where('sort_by','2')->where('status','true')->orderBy('id','desc')->paginate(30);
+        $category_home = category::where('sort_by','1')->where('home','true')->get();
+        $articles_new = articles::where('sort_by','1')->where('status','true')->orderBy('id','desc')->paginate(6);
         return view('pages.home',[
             'active'=>$active,
             'slider'=>$slider,
-            'articles' => $articles,
+            'category_home' => $category_home,
+            'articles_new' => $articles_new,
         ]);
     }
 
@@ -105,7 +107,7 @@ class c_frontend extends Controller
             }
             $new_id_pro_array = array_unique($id_pro_array);
             // dd($new_id_pro_array);
-            $articles = articles::where('status','true')->whereIn('id',$new_id_pro_array)->orderBy('id','desc')->paginate(24);
+            $articles = articles::where('status','true')->whereIn('id',$new_id_pro_array)->orderBy('id','desc')->paginate(9);
             return view('pages.product',['category'=>$category, 'product'=>$articles, 'active'=>$active]);
         }
 

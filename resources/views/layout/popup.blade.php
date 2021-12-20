@@ -76,7 +76,9 @@ function cart() {
     text-align: center;
     line-height: 20px;
     border-radius: 50px;
-    box-shadow: 0px 0px 5px 5px red;cursor: pointer;font-family: tahoma !important;
+    box-shadow: 0px 0px 5px 5px #000;
+    cursor: pointer;
+    font-family: tahoma !important;
     font-weight: bold;
 }
 </style>

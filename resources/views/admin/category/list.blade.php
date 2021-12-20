@@ -55,6 +55,7 @@
                                 <th>SKU</th>
                                 <!-- <th>View</th> -->
                                 <th>Status</th>
+                                <th>Home</th>
                                 <th>User</th>
                                 <th>Sort By</th>
                                 <th>date</th>
@@ -95,6 +96,9 @@
                         <!-- <td><input type="text" id="view" value="{{$val->view}}" name="" class="form-control cat_view"></td> -->
                         <td>
                             <label class="container"><input <?php if($val->status == 'true'){echo "checked";} ?> type="checkbox" id='status_cat' ><span class="checkmark"></span></label>
+                        </td>
+                        <td>
+                            <label class="container"><input <?php if($val->home == 'true'){echo "checked";} ?> type="checkbox" id='home' ><span class="checkmark"></span></label>
                         </td>
                         <td>{{$val->user->name}}</td>
                         <td>

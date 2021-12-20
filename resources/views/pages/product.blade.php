@@ -21,6 +21,9 @@
     <header class="panel-head homes-tit-1">
       <h2>{{$category->name}}</h2>
     </header>
+    <div class="content">
+        {!! $category->content !!}
+    </div>
     <ul class="uk-grid lib-grid-20 uk-grid-width-1-1 uk-grid-width-medium-1-3 uk-grid-width-large-1-3 list-product" data-uk-grid-match="{target:'.title'}">
     <!-- iteam -->
     @foreach($product as $val)
@@ -43,6 +46,7 @@
     @endforeach
     <!-- iteam -->
     </ul>
+    {{ $product->links() }}
   </div>
   <div class="uk-width-large-1-4 menu-left uk-visible-large">
     @include('layout.sidebar_pro')
@@ -54,6 +58,11 @@
 </section>
 </div>
 </div>
-
-
+<style type="text/css">
+    .content{
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #ddd;
+    }
+</style>
 @endsection

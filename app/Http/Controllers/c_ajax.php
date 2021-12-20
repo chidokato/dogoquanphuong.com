@@ -33,6 +33,14 @@ class c_ajax extends Controller
             $category->save();
         }
     }
+    public function update_home_category($id)
+    {
+        if(Request::ajax()){
+            $category = category::find($id);
+            $category->home = Request::get('home');
+            $category->save();
+        }
+    }
     public function update_status_menu($id)
     {
         if(Request::ajax()){

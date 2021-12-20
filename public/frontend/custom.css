@@ -40,7 +40,7 @@
 .product .infor{padding: 10px; text-align: left;}
 .product .infor a {color: #905919;text-decoration: none;cursor: pointer;font-size: 1.2rem;}
 .product{ margin-bottom: 20px !important }
-.product .img-cover img{height: 285px; width: 100%; object-fit: cover;}
+.product .img-cover img{height: 255px; width: 100%; object-fit: cover;}
 
 .tab {overflow: hidden;background-color: #f1f1f1;display: flex;justify-content: center;padding: 10px; }
 .tab button {background-color: inherit;float: left;border: none;outline: none;cursor: pointer;padding: 7px 16px; border-radius: 5px; margin: 0px 10px;transition: 0.3s;font-size: 17px;border: 1px solid #999;}
@@ -143,6 +143,23 @@
 }
 .content h1{ font-weight: bold; font-size: 1.6rem }
 .content h2{ font-weight: 200; font-size: 1.2rem }
+.select2-container {width: 100% !important;}
+.pagination{ display: flex; }
+.pagination li{ list-style: none; }
+.pagination span{    padding: 6px 10px;
+    background: #22160c;
+    margin: 0px 3px;
+    text-align: center;
+    color: #fff;
+    border-radius: 50px;}
+.pagination a{
+	    padding: 6px 10px;
+    background: #65462b;
+    margin: 0px 3px;
+    text-align: center;
+    color: #fff;
+    border-radius: 50px;
+}
 
 @-webkit-keyframes fadeEffect {
   from {opacity: 0;}

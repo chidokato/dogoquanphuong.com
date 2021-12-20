@@ -68,5 +68,8 @@
 	<script> alert('Thành công'); </script>
 @endif
 @yield('script')
+
+@include('layout.popup')
+
 </body>
 </html>

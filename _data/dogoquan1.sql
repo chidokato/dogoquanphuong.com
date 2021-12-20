@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th12 18, 2021 lúc 03:03 AM
+-- Thời gian đã tạo: Th12 20, 2021 lúc 11:01 AM
 -- Phiên bản máy phục vụ: 10.4.21-MariaDB
 -- Phiên bản PHP: 7.3.30
 
@@ -49,14 +49,6 @@ CREATE TABLE `articles` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Đang đổ dữ liệu cho bảng `articles`
---
-
-INSERT INTO `articles` (`id`, `category_id`, `category_sku`, `user_id`, `seo_id`, `product_id`, `sort_by`, `sku`, `name`, `img`, `img2`, `hits`, `hot`, `tag`, `status`, `content`, `detail`, `slug`, `created_at`, `updated_at`) VALUES
-(232, 143, '', 1, 130, 44, '1', 'wdnQXPfY', 'bán chung cư giá rẻ', 'JwG5qX4nIA1632045935.jpg', NULL, 58, NULL, NULL, 'true', NULL, NULL, 'ban-chung-cu-gia-re', '2021-12-17 09:46:05', '2021-12-18 01:50:50'),
-(234, 143, NULL, 1, 132, 46, '1', '3xXvWrQl', 'bán chung cư giá rẻ s', NULL, NULL, 50, NULL, NULL, 'true', NULL, NULL, 'ban-chung-cu-gia-re-s', '2021-12-17 09:54:45', '2021-12-17 09:54:45');
 
 -- --------------------------------------------------------
 
@@ -140,8 +132,32 @@ CREATE TABLE `category` (
 --
 
 INSERT INTO `category` (`id`, `user_id`, `seo_id`, `sku`, `name`, `img`, `sort_by`, `slug`, `parent`, `view`, `icon`, `status`, `content`, `hits`, `hot`, `created_at`, `updated_at`) VALUES
-(141, 1, 112, 'jgAVMUDq', 'Tin tức', NULL, 2, 'tin-tuc', 0, NULL, NULL, 'true', NULL, 50, NULL, '2021-12-14 04:46:48', '2021-12-14 04:46:48'),
-(143, 1, 121, 'zWp0lKWG', 'Gỗ nguyên tấm', NULL, 1, 'go-nguyen-tam', 0, NULL, NULL, 'true', NULL, 50, NULL, '2021-12-16 02:28:56', '2021-12-16 02:28:56');
+(150, 1, 139, 'SbsoHVJd', 'Giường', NULL, 1, 'giuong', 0, NULL, NULL, 'true', NULL, 50, NULL, '2021-12-18 04:24:21', '2021-12-18 04:24:21'),
+(143, 1, 121, 'zWp0lKWG', 'Mặt bàn nguyên tấm', NULL, 1, 'mat-ban-nguyen-tam', 0, NULL, NULL, 'true', NULL, 50, NULL, '2021-12-16 02:28:56', '2021-12-20 02:14:21'),
+(151, 1, 140, 'MQZmZUnE', 'Giường gỗ cẩm', NULL, 1, 'giuong-go-cam', 150, NULL, NULL, 'true', '<p><strong>Bộ b&agrave;n ghế gỗ cẩm nguy&ecirc;n tấm 100% gỗ tự nhi&ecirc;n vừa bền vừa mang lại sự sang trọng.&nbsp;</strong>Kh&ocirc;ng chỉ tạo n&ecirc;n sự ngon miệng trong bữa ăn, một bộ b&agrave;n ăn gỗ cẩm c&ograve;n mang lại kh&ocirc;ng kh&iacute; gia đ&igrave;nh ấm c&uacute;ng.</p>\r\n\r\n<p>Nội Thất Minh Long Sang Trọng&nbsp;&ndash; tự h&agrave;o l&agrave; nơi mang đến những sản phẩm nội thất ưu Việt tạo dựng kh&ocirc;ng gian hạnh ph&uacute;c cho gia đ&igrave;nh bạn với c&aacute;c sản phẩm chất lượng c&oacute; gi&aacute; tốt nhất thị trường. B&agrave;n ghế Gỗ Cẩm nguy&ecirc;n khối l&agrave; gỗ tự nhi&ecirc;n 100%, c&agrave;ng d&ugrave;ng l&acirc;u gi&aacute; trị sẽ c&agrave;ng tăng.</p>\r\n\r\n<p>To&agrave;n bộ sản phẩm bộ b&agrave;n ăn đều được Minh Long Sang Trọng sử dụng c&aacute;c loại gỗ tự nhi&ecirc;n cao cấp đ&atilde; qua xử l&yacute; tẩm sấy chống mối mọt cong v&ecirc;nh, c&oacute; tuổi thọ cao, bền đẹp theo thời gian.</p>\r\n\r\n<p>H&atilde;y li&ecirc;n hệ ngay với&nbsp;<strong>Minh Long Sang Trọng</strong>&nbsp;để được c&aacute;c chuy&ecirc;n gia của ch&uacute;ng t&ocirc;i tư vấn về sản phẩm cũng như đặt h&agrave;ng một c&aacute;ch nhanh nhất &ndash; Hotline:&nbsp;<a href=\"tel:0886 620 888\">0886 620 888</a></p>\r\n\r\n<p><strong>Lựa chọn Minh Long Sang Trọng qu&yacute; kh&aacute;ch sẽ nhận được:</strong></p>\r\n\r\n<ul>\r\n	<li>Sản phẩm cam kết chất lượng 100% như lời giới thiệu.</li>\r\n	<li>Sản phẩm c&oacute; thời hạn bảo h&agrave;nh 02 năm.</li>\r\n	<li>Tuổi thọ sản phẩm l&ecirc;n tới tr&ecirc;n&nbsp;100 năm.</li>\r\n	<li>Đặt h&agrave;ng theo k&iacute;ch thước v&agrave; m&agrave;u sắc.</li>\r\n	<li>Miễn ph&iacute; vận chuyển trong Th&agrave;nh Phố Bu&ocirc;n Ma Thuột</li>\r\n</ul>', 50, NULL, '2021-12-18 04:24:31', '2021-12-20 07:39:38'),
+(145, 1, 134, '0XlNRgl0', 'Mặt Bàn Gỗ Cẩm', NULL, 1, 'mat-ban-go-cam', 143, NULL, NULL, 'true', NULL, 50, NULL, '2021-12-18 04:22:25', '2021-12-18 04:22:25'),
+(146, 1, 135, 'xQNIIpfr', 'Mặt Bàn Gõ Vàng', NULL, 1, 'mat-ban-go-vang', 143, NULL, NULL, 'true', NULL, 50, NULL, '2021-12-18 04:23:04', '2021-12-18 04:23:04'),
+(147, 1, 136, 'TWpVspuC', 'Mặt Bàn Gõ Đỏ', NULL, 1, 'mat-ban-go-do', 143, NULL, NULL, 'true', NULL, 50, NULL, '2021-12-18 04:23:24', '2021-12-18 04:23:24'),
+(148, 1, 137, '1gCj7JF7', 'Mặt Bàn Xoan Hương', NULL, 1, 'mat-ban-xoan-huong', 143, NULL, NULL, 'true', NULL, 50, NULL, '2021-12-18 04:23:35', '2021-12-18 04:23:35'),
+(149, 1, 138, '0v7YlRsX', 'Mặt Bàn Lim Vàng', NULL, 1, 'mat-ban-lim-vang', 143, NULL, NULL, 'true', NULL, 50, NULL, '2021-12-18 04:23:49', '2021-12-18 04:23:49'),
+(152, 1, 141, 'OpaLLlY3', 'Giường gỗ đỏ', NULL, 1, 'giuong-go-do', 150, NULL, NULL, 'true', NULL, 50, NULL, '2021-12-18 04:24:42', '2021-12-18 04:24:42'),
+(153, 1, 142, 'YNoafsyb', 'Giường gỗ vàng', NULL, 1, 'giuong-go-vang', 150, NULL, NULL, 'true', NULL, 50, NULL, '2021-12-18 04:24:51', '2021-12-18 04:24:51'),
+(154, 1, 143, 'kY9yOyP3', 'Bàn 3 tấm', NULL, 1, 'ban-3-tam', 0, NULL, NULL, 'true', NULL, 50, NULL, '2021-12-18 04:25:23', '2021-12-18 04:25:31'),
+(155, 1, 144, 'EtWy7sSl', 'Bàn 3 tấm gỗ cẩm', NULL, 1, 'ban-3-tam-go-cam', 154, NULL, NULL, 'true', NULL, 50, NULL, '2021-12-18 04:26:01', '2021-12-18 04:26:01'),
+(156, 1, 145, 'poZfC5wR', 'Bàn 3 tấm gỗ vàng', NULL, 1, 'ban-3-tam-go-vang', 154, NULL, NULL, 'true', NULL, 50, NULL, '2021-12-18 04:26:09', '2021-12-18 04:26:09'),
+(157, 1, 146, '9iOV7RQB', 'Bàn 3 tấm gỗ đỏ', NULL, 1, 'ban-3-tam-go-do', 154, NULL, NULL, 'true', NULL, 50, NULL, '2021-12-18 04:26:16', '2021-12-18 04:26:16'),
+(158, 1, 147, 'vzcE1JPs', 'Bàn 3 tấm xoan hương', NULL, 1, 'ban-3-tam-xoan-huong', 154, NULL, NULL, 'true', NULL, 50, NULL, '2021-12-18 04:26:34', '2021-12-18 04:26:34'),
+(159, 1, 148, 'wkQz8w3m', 'Bàn 3 tấm lim vàng', NULL, 1, 'ban-3-tam-lim-vang', 154, NULL, NULL, 'true', NULL, 50, NULL, '2021-12-18 04:26:44', '2021-12-18 04:26:44'),
+(160, 1, 149, 'OU3Lq6n0', 'Sập gỗ - phản gỗ', NULL, 1, 'sap-go-phan-go', 0, NULL, NULL, 'true', NULL, 50, NULL, '2021-12-18 04:27:09', '2021-12-18 04:27:09'),
+(161, 1, 150, 'oGtVscF0', 'Sập 1 tấm', NULL, 1, 'sap-1-tam', 160, NULL, NULL, 'true', NULL, 50, NULL, '2021-12-18 04:27:22', '2021-12-18 04:27:22'),
+(162, 1, 151, 'ZzMTdnzh', 'Sập 2 tấm', NULL, 1, 'sap-2-tam', 160, NULL, NULL, 'true', NULL, 50, NULL, '2021-12-18 04:27:29', '2021-12-18 04:27:29'),
+(163, 1, 152, 'mm604Kdf', 'Sofa gỗ nguyên tấm', NULL, 1, 'sofa-go-nguyen-tam', 0, NULL, NULL, 'true', NULL, 50, NULL, '2021-12-18 04:27:51', '2021-12-18 04:27:51'),
+(164, 1, 153, 'kR5p5QMe', 'Bàn tròn nguyên tấm', NULL, 1, 'ban-tron-nguyen-tam', 0, NULL, NULL, 'true', NULL, 50, NULL, '2021-12-18 04:28:05', '2021-12-18 04:28:05'),
+(165, 1, 154, '3uDZotua', 'Kệ tivi nguyên tấm', NULL, 1, 'ke-tivi-nguyen-tam', 0, NULL, NULL, 'true', NULL, 50, NULL, '2021-12-18 04:28:15', '2021-12-18 04:28:15'),
+(167, 1, 156, 'HEja5meD', 'Giới thiệu', NULL, 3, 'gioi-thieu', 0, NULL, NULL, 'true', '<p>C&Ocirc;NG TY MINH LONG SANG TRỌNG &ndash; DOANH NGHIỆP TI&Ecirc;N PHONG H&Agrave;NG ĐẦU TRONG SẢN XUẤT NỘI THẤT GỖ TỰ NHI&Ecirc;N NGUY&Ecirc;N KHỐI.</p>\r\n\r\n<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-</p>\r\n\r\n<p><img alt=\"\" src=\"https://static.xx.fbcdn.net/images/emoji.php/v9/f6a/1/16/1f530.png\" style=\"height:16px; width:16px\" />&nbsp;Tọa lạc tr&ecirc;n một khu đất rộng lớn, Nh&agrave; m&aacute;y sản xuất của C&ocirc;ng ty TNHH Minh Long Sang Trọng đang ng&agrave;y c&agrave;ng ho&agrave;n thiện v&agrave; ph&aacute;t triển theo xu thế hội nhập chung của nền kinh tế Đất nước. Hiện nay ch&uacute;ng t&ocirc;i c&oacute; 4 cơ sở hoạt động ch&iacute;nh:</p>\r\n\r\n<p><img alt=\"\" src=\"https://static.xx.fbcdn.net/images/emoji.php/v9/fc6/1/16/1f6a9.png\" style=\"height:16px; width:16px\" />&nbsp;Nh&agrave; m&aacute;y sản xuất: L&ocirc; B24, Khu C&ocirc;ng nghiệp H&ograve;a Ph&uacute;, TP. Bu&ocirc;n Ma Thuột, tỉnh ĐăkLăk.</p>\r\n\r\n<p><img alt=\"\" src=\"https://static.xx.fbcdn.net/images/emoji.php/v9/fc6/1/16/1f6a9.png\" style=\"height:16px; width:16px\" />&nbsp;Chi nh&aacute;nh 1: 163 Nguyễn thị Nhung Khu Đ&ocirc; Thị Vạn Ph&uacute;c Hiệp B&igrave;nh Phước Quận Thủ Đức.</p>\r\n\r\n<p><img alt=\"\" src=\"https://static.xx.fbcdn.net/images/emoji.php/v9/fc6/1/16/1f6a9.png\" style=\"height:16px; width:16px\" />&nbsp;Chi nh&aacute;nh 2: Số 6 tổ 10 khu 1 Trần Hưng Đạo, Tp Hạ Long, Quảng Ninh..</p>\r\n\r\n<p><img alt=\"\" src=\"https://static.xx.fbcdn.net/images/emoji.php/v9/f6a/1/16/1f530.png\" style=\"height:16px; width:16px\" />&nbsp;Trong tương lai c&aacute;c cơ sở của MINH LONG SANG TRỌNG sẽ c&oacute; mặt ở c&aacute;c tỉnh th&agrave;nh lớn tr&ecirc;n cả nước như: H&agrave; Nội, Hải Ph&ograve;ng, TP. Hồ Ch&iacute; Minh, Đ&agrave; Nẵng&hellip;</p>\r\n\r\n<p><img alt=\"\" src=\"https://static.xx.fbcdn.net/images/emoji.php/v9/f6a/1/16/1f530.png\" style=\"height:16px; width:16px\" />&nbsp;H&igrave;nh th&agrave;nh tr&ecirc;n mảnh đất Cao Nguy&ecirc;n h&ugrave;ng vĩ c&ugrave;ng với truyền thống v&agrave; t&acirc;m huyết sản xuất NỘI THẤT GỖ TỰ NHI&Ecirc;N hơn 20 năm của một gia tộc l&acirc;u đời, Nh&agrave; m&aacute;y sản xuất của MINH LONG SANG TRỌNG đang lớn mạnh từng ng&agrave;y. Với sự nỗ lực kh&ocirc;ng ngừng, ch&uacute;ng t&ocirc;i đang mở rộng quy m&ocirc; ph&aacute;t triển cả về cơ sở hạ tầng cũng như nguồn nh&acirc;n lực ở mọi mặt. Hiện nay, CTY MINH LONG SANG TRỌNG c&oacute; h&agrave;ng trăm c&aacute;n bộ c&ocirc;ng nh&acirc;n vi&ecirc;n bao gồm nh&acirc;n sự h&agrave;nh ch&iacute;nh v&agrave; c&ocirc;ng nh&acirc;n trực tiếp tham gia sản xuất tại Nh&agrave; m&aacute;y. Ngo&agrave;i đội ngũ thợ ch&iacute;nh c&oacute; kinh nghiệm l&acirc;u năm trong nghề th&igrave; tất cả đội ngũ nh&acirc;n sự đều được đ&agrave;o tạo b&agrave;i bản theo đ&uacute;ng ch&iacute;nh s&aacute;ch của C&ocirc;ng ty.&nbsp;</p>\r\n\r\n<p><img alt=\"\" src=\"https://static.xx.fbcdn.net/images/emoji.php/v9/f6a/1/16/1f530.png\" style=\"height:16px; width:16px\" />&nbsp;Với tất cả sự đam m&ecirc;, t&acirc;m huyết v&agrave; nỗ lực kh&ocirc;ng ngừng, vừa qua C&ocirc;ng ty TNHH MINH LONG SANG TRỌNG đ&atilde; vinh dự nhận danh hiệu Top 10 THƯƠNG HIỆU HỘI NHẬP XUẤT SẮC VIỆT NAM. Đ&acirc;y l&agrave; bước đệm v&ocirc; c&ugrave;ng lớn để ch&uacute;ng t&ocirc;i tiến xa hơn kh&ocirc;ng chỉ dừng lại ở thị trường trong nước m&agrave; c&ograve;n vươn ra thị trường thế giới</p>', 50, NULL, '2021-12-20 02:18:59', '2021-12-20 02:27:24'),
+(168, 1, 157, 'Lutkl1nP', 'Liên hệ', NULL, 3, 'lien-he', 0, NULL, NULL, 'true', NULL, 50, NULL, '2021-12-20 02:19:08', '2021-12-20 02:19:08'),
+(169, 1, 158, 'ydxenVwT', 'Thanh toán', NULL, 3, 'thanh-toan', 0, NULL, NULL, 'true', '<p>HƯỚNG DẪN THANH TO&Aacute;N</p>\r\n\r\n<p>TH&Ocirc;NG TIN C&Ocirc;NG TY</p>\r\n\r\n<p><strong>C&Ocirc;NG TY TNHH MINH LONG SANG TRỌNG</strong><br />\r\nĐịa Chỉ: Số 126 đường Nguyễn Th&aacute;i B&igrave;nh, X&atilde; H&ograve;a Thắng, TP.Bu&ocirc;n Ma Thuột, Đắk Lắk.<br />\r\nM&atilde; Số Thuế:&nbsp;<strong>6001502211</strong></p>\r\n\r\n<p>HƯỚNG DẪN CHUYỂN KHOẢN</p>\r\n\r\n<p><strong>Hướng dẫn chuyển khoản đặt cọc:</strong></p>\r\n\r\n<p>Qu&yacute; kh&aacute;ch khi chuyển khoản v&agrave;o c&aacute;c ng&acirc;n h&agrave;ng dưới đ&acirc;y.&nbsp;<strong>Nội dung chuyển</strong>&nbsp;xin vui l&ograve;ng điền&nbsp;<strong>số điện thoại</strong>&nbsp;qu&yacute; kh&aacute;ch để bộ phận kế to&aacute;n tiện theo d&otilde;i.</p>\r\n\r\n<p>Sau khi nhận được tiền cọc từ qu&yacute; kh&aacute;ch, bộ phận kế to&aacute;n sẽ li&ecirc;n hệ x&aacute;c nhận với qu&yacute; kh&aacute;ch qua điện thoại. Trường hợp đ&atilde; sau 2 ng&agrave;y l&agrave;m việc m&agrave; chưa nhận cuộc gọi x&aacute;c nhận. Qu&yacute; kh&aacute;ch vui l&ograve;ng li&ecirc;n hệ: TH&Aacute;I HIỀN (<strong>0886.304.999)</strong></p>\r\n\r\n<p>T&Agrave;I KHOẢN NG&Acirc;N H&Agrave;NG</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><img alt=\"\" src=\"https://minhlongsangtrong.com/wp-content/uploads/2018/04/logo-ngan-hang-acb.jpg\" style=\"height:36px; width:200px\" /></p>\r\n\r\n<p><strong>686868858</strong><br />\r\n<strong>TRAN THI THANH HUONG</strong><br />\r\nNg&acirc;n h&agrave;ng ACB CN Daklak</p>', 50, NULL, '2021-12-20 02:19:16', '2021-12-20 02:28:47'),
+(170, 1, 159, 'IZJwYEuj', 'Tin tức', NULL, 2, 'tin-tuc', 0, NULL, NULL, 'true', NULL, 50, NULL, '2021-12-20 02:29:33', '2021-12-20 02:29:33');
 
 -- --------------------------------------------------------
 
@@ -1052,10 +1068,32 @@ CREATE TABLE `menu` (
 --
 
 INSERT INTO `menu` (`id`, `user_id`, `seo_id`, `sku`, `classify`, `name`, `img`, `sort_by`, `slug`, `parent`, `view`, `icon`, `status`, `content`, `hits`, `hot`, `created_at`, `updated_at`) VALUES
-(174, 1, NULL, '5380J7M2', 'Menu top', 'Liên hệ', NULL, NULL, 'lien-he', 0, 4, NULL, 'true', NULL, 50, NULL, '2021-12-14 09:47:00', '2021-12-17 04:16:29'),
-(173, 1, NULL, 'ECRH8ntg', 'Menu top', 'Tin tức', NULL, NULL, 'tin-tuc', 0, 3, NULL, 'true', NULL, 50, NULL, '2021-12-14 09:46:51', '2021-12-17 04:16:25'),
-(176, 1, NULL, 'pqbDVsQ7', 'Product menu', 'Gỗ nguyên tấm', NULL, NULL, 'go-nguyen-tam', 0, NULL, NULL, 'true', NULL, 50, NULL, '2021-12-17 04:16:47', '2021-12-17 04:16:47'),
-(171, 1, NULL, 'xTAtl1Bg', 'Menu top', 'Giới thiệu', NULL, NULL, 'gioi-thieu', 0, 1, NULL, 'true', NULL, 50, NULL, '2021-12-14 09:46:31', '2021-12-17 04:16:21');
+(177, 1, NULL, 'bM00M8Mx', 'Product menu', 'Giường', NULL, NULL, 'giuong', 0, 2, NULL, 'true', NULL, 50, NULL, '2021-12-18 04:28:54', '2021-12-20 02:14:46'),
+(178, 1, NULL, 'OtLpLBVY', 'Product menu', 'Giường gỗ cẩm', NULL, NULL, 'giuong-go-cam', 177, NULL, NULL, 'true', NULL, 50, NULL, '2021-12-18 04:29:21', '2021-12-18 04:29:33'),
+(179, 1, NULL, 'Ufo09crt', 'Main menu', 'Giường gỗ đỏ', NULL, NULL, 'giuong-go-do', 177, NULL, NULL, 'true', NULL, 50, NULL, '2021-12-18 04:29:45', '2021-12-18 04:29:45'),
+(180, 1, NULL, 'zeGAZ1KY', 'Product menu', 'Giường gỗ vàng', NULL, NULL, 'giuong-go-vang', 177, NULL, NULL, 'true', NULL, 50, NULL, '2021-12-20 02:00:49', '2021-12-20 02:00:56'),
+(181, 1, NULL, 'yfHuODMM', 'Product menu', 'Mặt bàn nguyên tấm', NULL, NULL, 'mat-ban-nguyen-tam', 0, 1, NULL, 'true', NULL, 50, NULL, '2021-12-20 02:05:46', '2021-12-20 02:14:42'),
+(182, 1, NULL, 'Uj7rDhYZ', 'Product menu', 'Mặt Bàn Gỗ Cẩm', NULL, NULL, 'mat-ban-go-cam', 181, NULL, NULL, 'true', NULL, 50, NULL, '2021-12-20 02:06:00', '2021-12-20 02:06:00'),
+(183, 1, NULL, 'uULzEqE0', 'Product menu', 'Mặt Bàn Gõ Vàng', NULL, NULL, 'mat-ban-go-vang', 181, NULL, NULL, 'true', NULL, 50, NULL, '2021-12-20 02:06:08', '2021-12-20 02:06:08'),
+(184, 1, NULL, '7gVNeg61', 'Product menu', 'Mặt Bàn Gõ Đỏ', NULL, NULL, 'mat-ban-go-do', 181, NULL, NULL, 'true', NULL, 50, NULL, '2021-12-20 02:06:16', '2021-12-20 02:06:16'),
+(185, 1, NULL, 'AlxqxSMm', 'Product menu', 'Mặt Bàn Xoan Hương', NULL, NULL, 'mat-ban-xoan-huong', 181, NULL, NULL, 'true', NULL, 50, NULL, '2021-12-20 02:06:23', '2021-12-20 02:06:23'),
+(186, 1, NULL, 'B6jyBwJf', 'Product menu', 'Mặt Bàn Lim Vàng', NULL, NULL, 'mat-ban-lim-vang', 181, NULL, NULL, 'true', NULL, 50, NULL, '2021-12-20 02:06:30', '2021-12-20 02:06:30'),
+(187, 1, NULL, 'qu6k5Gmg', 'Product menu', 'Bàn 3 tấm', NULL, NULL, 'ban-3-tam', 0, 3, NULL, 'true', NULL, 50, NULL, '2021-12-20 02:06:40', '2021-12-20 02:14:55'),
+(188, 1, NULL, 'x5QpzzML', 'Product menu', 'Bàn 3 tấm gỗ cẩm', NULL, NULL, 'ban-3-tam-go-cam', 187, NULL, NULL, 'true', NULL, 50, NULL, '2021-12-20 02:07:01', '2021-12-20 02:07:01'),
+(189, 1, NULL, 'kuBto5y7', 'Product menu', 'Bàn 3 tấm gỗ vàng', NULL, NULL, 'ban-3-tam-go-vang', 187, NULL, NULL, 'true', NULL, 50, NULL, '2021-12-20 02:07:09', '2021-12-20 02:07:09'),
+(190, 1, NULL, 'CCNQRmLK', 'Product menu', 'Bàn 3 tấm gỗ đỏ', NULL, NULL, 'ban-3-tam-go-do', 187, NULL, NULL, 'true', NULL, 50, NULL, '2021-12-20 02:07:18', '2021-12-20 02:07:18'),
+(191, 1, NULL, 'Ru5fqLm1', 'Product menu', 'Bàn 3 tấm xoan hương', NULL, NULL, 'ban-3-tam-xoan-huong', 187, NULL, NULL, 'true', NULL, 50, NULL, '2021-12-20 02:07:24', '2021-12-20 02:07:24'),
+(192, 1, NULL, 'Q8Hivfc7', 'Product menu', 'Bàn 3 tấm lim vàng', NULL, NULL, 'ban-3-tam-lim-vang', 187, NULL, NULL, 'true', NULL, 50, NULL, '2021-12-20 02:07:33', '2021-12-20 02:07:33'),
+(193, 1, NULL, 'D6FKTasC', 'Product menu', 'Sập gỗ - phản gỗ', NULL, NULL, 'sap-go-phan-go', 0, 4, NULL, 'true', NULL, 50, NULL, '2021-12-20 02:07:41', '2021-12-20 02:15:01'),
+(194, 1, NULL, 'dTqNEUSF', 'Product menu', 'Sập 1 tấm', NULL, NULL, 'sap-1-tam', 193, NULL, NULL, 'true', NULL, 50, NULL, '2021-12-20 02:07:52', '2021-12-20 02:07:52'),
+(195, 1, NULL, 'ulsRrkrU', 'Product menu', 'Sập 2 tấm', NULL, NULL, 'sap-2-tam', 193, NULL, NULL, 'true', NULL, 50, NULL, '2021-12-20 02:07:59', '2021-12-20 02:07:59'),
+(196, 1, NULL, 'tdXc3qKz', 'Product menu', 'Sofa gỗ nguyên tấm', NULL, NULL, 'sofa-go-nguyen-tam', 0, 5, NULL, 'true', NULL, 50, NULL, '2021-12-20 02:08:07', '2021-12-20 02:15:12'),
+(197, 1, NULL, '1KoGml6k', 'Product menu', 'Bàn tròn nguyên tấm', NULL, NULL, 'ban-tron-nguyen-tam', 0, 6, NULL, 'true', NULL, 50, NULL, '2021-12-20 02:17:07', '2021-12-20 02:17:32'),
+(198, 1, NULL, 'BkXrzWOt', 'Product menu', 'Kệ tivi nguyên tấm', NULL, NULL, 'ke-tivi-nguyen-tam', 0, 7, NULL, 'true', NULL, 50, NULL, '2021-12-20 02:17:26', '2021-12-20 02:17:33'),
+(199, 1, NULL, 'YD6cvnpJ', 'Menu top', 'Giới thiệu', NULL, NULL, 'gioi-thieu', 0, 1, NULL, 'true', NULL, 50, NULL, '2021-12-20 02:20:39', '2021-12-20 02:30:07'),
+(200, 1, NULL, 'QC66IbUR', 'Menu top', 'Liên hệ', NULL, NULL, 'lien-he', 0, 4, NULL, 'true', NULL, 50, NULL, '2021-12-20 02:20:50', '2021-12-20 02:30:10'),
+(201, 1, NULL, 'mBSR3DaO', 'Menu top', 'Thanh toán', NULL, NULL, 'thanh-toan', 0, 2, NULL, 'true', NULL, 50, NULL, '2021-12-20 02:21:00', '2021-12-20 02:30:08'),
+(202, 1, NULL, '4UWZe34G', 'Menu top', 'Tin tức', NULL, NULL, 'tin-tuc', 0, 3, NULL, 'true', NULL, 50, NULL, '2021-12-20 02:29:53', '2021-12-20 02:30:09');
 
 -- --------------------------------------------------------
 
@@ -1175,17 +1213,11 @@ CREATE TABLE `product` (
   `oldprice` varchar(11) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `saleoff` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `number` varchar(11) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `size` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `include` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Đang đổ dữ liệu cho bảng `product`
---
-
-INSERT INTO `product` (`id`, `mausac_id`, `price`, `oldprice`, `saleoff`, `number`, `created_at`, `updated_at`) VALUES
-(44, '', NULL, NULL, NULL, NULL, '2021-12-17 09:46:05', '2021-12-17 09:46:15'),
-(46, NULL, NULL, NULL, NULL, NULL, '2021-12-17 09:54:45', '2021-12-17 09:54:45');
 
 -- --------------------------------------------------------
 
@@ -1374,10 +1406,32 @@ INSERT INTO `seo` (`id`, `title`, `description`, `keywords`, `robot`, `created_a
 (96, '                                                                        Chương trình Tự hào Nông dân Việt Nam 2021: Mong bình ổn giá giúp nông dân thoát cảnh “1 cổ 3 tròng”                               ', '                                                                        Chương trình Tự hào Nông dân Việt Nam 2021: Mong bình ổn giá giúp nông dân thoát cảnh “1 cổ 3 tròng”                               ', NULL, NULL, '2021-11-28 18:48:58', '2021-11-28 18:48:58'),
 (97, '                                                                        Chương trình Tự hào Nông dân Việt Nam 2021: Mong bình ổn giá giúp nông dân thoát cảnh “1 cổ 3 tròng”                               ', '                                                                        Chương trình Tự hào Nông dân Việt Nam 2021: Mong bình ổn giá giúp nông dân thoát cảnh “1 cổ 3 tròng”                               ', NULL, NULL, '2021-11-28 18:49:37', '2021-11-28 18:49:37'),
 (98, '                                                                        Chương trình Tự hào Nông dân Việt Nam 2021: Mong bình ổn giá giúp nông dân thoát cảnh “1 cổ 3 tròng”                               ', '                                                                        Chương trình Tự hào Nông dân Việt Nam 2021: Mong bình ổn giá giúp nông dân thoát cảnh “1 cổ 3 tròng”                               ', NULL, NULL, '2021-11-28 18:50:09', '2021-11-28 18:50:09'),
-(112, NULL, NULL, NULL, 'index, follow', '2021-12-13 21:46:48', '2021-12-13 21:46:48'),
 (121, NULL, NULL, NULL, 'index, follow', '2021-12-15 19:28:56', '2021-12-15 19:28:56'),
-(130, NULL, NULL, NULL, 'index, follow', '2021-12-17 02:46:05', '2021-12-17 02:46:05'),
-(132, NULL, NULL, NULL, 'index, follow', '2021-12-17 02:54:45', '2021-12-17 02:54:45');
+(134, NULL, NULL, NULL, 'index, follow', '2021-12-18 04:22:25', '2021-12-18 04:22:25'),
+(135, NULL, NULL, NULL, 'index, follow', '2021-12-18 04:23:04', '2021-12-18 04:23:04'),
+(136, NULL, NULL, NULL, 'index, follow', '2021-12-18 04:23:24', '2021-12-18 04:23:24'),
+(137, NULL, NULL, NULL, 'index, follow', '2021-12-18 04:23:35', '2021-12-18 04:23:35'),
+(138, NULL, NULL, NULL, 'index, follow', '2021-12-18 04:23:49', '2021-12-18 04:23:49'),
+(139, NULL, NULL, NULL, 'index, follow', '2021-12-18 04:24:21', '2021-12-18 04:24:21'),
+(140, NULL, NULL, NULL, 'index, follow', '2021-12-18 04:24:31', '2021-12-18 04:24:31'),
+(141, NULL, NULL, NULL, 'index, follow', '2021-12-18 04:24:42', '2021-12-18 04:24:42'),
+(142, NULL, NULL, NULL, 'index, follow', '2021-12-18 04:24:51', '2021-12-18 04:24:51'),
+(143, NULL, NULL, NULL, 'index, follow', '2021-12-18 04:25:23', '2021-12-18 04:25:23'),
+(144, NULL, NULL, NULL, 'index, follow', '2021-12-18 04:26:01', '2021-12-18 04:26:01'),
+(145, NULL, NULL, NULL, 'index, follow', '2021-12-18 04:26:09', '2021-12-18 04:26:09'),
+(146, NULL, NULL, NULL, 'index, follow', '2021-12-18 04:26:16', '2021-12-18 04:26:16'),
+(147, NULL, NULL, NULL, 'index, follow', '2021-12-18 04:26:34', '2021-12-18 04:26:34'),
+(148, NULL, NULL, NULL, 'index, follow', '2021-12-18 04:26:44', '2021-12-18 04:26:44'),
+(149, NULL, NULL, NULL, 'index, follow', '2021-12-18 04:27:09', '2021-12-18 04:27:09'),
+(150, NULL, NULL, NULL, 'index, follow', '2021-12-18 04:27:22', '2021-12-18 04:27:22'),
+(151, NULL, NULL, NULL, 'index, follow', '2021-12-18 04:27:29', '2021-12-18 04:27:29'),
+(152, NULL, NULL, NULL, 'index, follow', '2021-12-18 04:27:51', '2021-12-18 04:27:51'),
+(153, NULL, NULL, NULL, 'index, follow', '2021-12-18 04:28:05', '2021-12-18 04:28:05'),
+(154, NULL, NULL, NULL, 'index, follow', '2021-12-18 04:28:15', '2021-12-18 04:28:15'),
+(156, NULL, NULL, NULL, 'index, follow', '2021-12-19 19:18:59', '2021-12-19 19:18:59'),
+(157, NULL, NULL, NULL, 'index, follow', '2021-12-19 19:19:08', '2021-12-19 19:19:08'),
+(158, NULL, NULL, NULL, 'index, follow', '2021-12-19 19:19:16', '2021-12-19 19:19:16'),
+(159, NULL, NULL, NULL, 'index, follow', '2021-12-19 19:29:33', '2021-12-19 19:29:33');
 
 -- --------------------------------------------------------
 
@@ -1416,7 +1470,7 @@ CREATE TABLE `setting` (
 --
 
 INSERT INTO `setting` (`id`, `name`, `address`, `hotline`, `hotline1`, `email`, `facebook`, `fbapp`, `googleplus`, `youtube`, `twitter`, `maps`, `sidebar`, `img`, `title`, `description`, `keywords`, `robot`, `analytics`, `codeheader`, `codebody`, `created_at`, `updated_at`) VALUES
-(1, 'SỔ TAY TIÊU DÙNG', 'Ecohomes 3, Đông Ngạc, Bắc Từ Liêm, Hà NộiHà Nội', '0977572947', NULL, 'info@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'lo-go-nho.jpg', 'Sổ tay tiêu dùng - Tổng hợp những mẹo hay giúp bạn tiêu dùng thông minh', 'Sổ tay tiêu dùng - Tổng hợp những mẹo hay giúp bạn tiêu dùng thông minh', 'Sổ tay tiêu dùng', 'index, follow', NULL, NULL, NULL, NULL, '2021-11-29 08:14:33');
+(1, 'Đồ gỗ quân phương', 'Hà Nội', '0977572947', '0977654321', 'dogoquanphuong@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'lo-go-nho.jpg', 'Đồ gỗ quân phương', 'Đồ gỗ quân phương', 'Đồ gỗ quân phương', 'index, follow', NULL, NULL, NULL, NULL, '2021-12-20 07:38:30');
 
 -- --------------------------------------------------------
 
@@ -33222,10 +33276,9 @@ CREATE TABLE `themes` (
 --
 
 INSERT INTO `themes` (`id`, `user_id`, `img`, `name`, `title`, `content`, `status`, `note`, `link`, `button`, `created_at`, `updated_at`) VALUES
-(7, 1, 'logo ngang-01.png', 'logo', NULL, NULL, 'true', 'logo', NULL, NULL, '2021-12-15 04:05:21', '2021-12-17 09:48:29'),
-(8, 1, 'logo-trang-ngang-nhaongay.png', 'logo âm bản', NULL, NULL, 'true', 'logo âm bản', NULL, NULL, '2021-12-15 04:05:57', '2021-12-15 04:05:57'),
-(9, 1, 'banner.png', 'slider', NULL, NULL, 'true', 'Slider', NULL, NULL, '2021-12-15 04:06:35', '2021-12-15 04:06:35'),
-(10, 1, 'banner1.png', 'slider 2', NULL, NULL, 'true', 'Slider', NULL, NULL, '2021-12-15 04:11:11', '2021-12-15 04:11:11');
+(11, 1, 'logo.png', 'logo đồ gỗ quân phương', NULL, NULL, 'true', 'logo', NULL, NULL, '2021-12-18 03:55:41', '2021-12-18 03:55:41'),
+(12, 1, 'logo-trang.png', 'logo đồ gỗ', NULL, NULL, 'true', 'logo âm bản', NULL, NULL, '2021-12-18 03:57:14', '2021-12-18 03:57:14'),
+(13, 1, 'cover_face.jpg', 'slider', NULL, NULL, 'true', 'Slider', NULL, NULL, '2021-12-20 02:41:53', '2021-12-20 02:41:53');
 
 -- --------------------------------------------------------
 
@@ -44731,7 +44784,7 @@ ALTER TABLE `ward`
 -- AUTO_INCREMENT cho bảng `articles`
 --
 ALTER TABLE `articles`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=235;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=239;
 
 --
 -- AUTO_INCREMENT cho bảng `banhang`
@@ -44743,7 +44796,7 @@ ALTER TABLE `banhang`
 -- AUTO_INCREMENT cho bảng `category`
 --
 ALTER TABLE `category`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=144;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=171;
 
 --
 -- AUTO_INCREMENT cho bảng `channel`
@@ -44779,7 +44832,7 @@ ALTER TABLE `form`
 -- AUTO_INCREMENT cho bảng `images`
 --
 ALTER TABLE `images`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=93;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=98;
 
 --
 -- AUTO_INCREMENT cho bảng `mausac`
@@ -44791,7 +44844,7 @@ ALTER TABLE `mausac`
 -- AUTO_INCREMENT cho bảng `menu`
 --
 ALTER TABLE `menu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=177;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=203;
 
 --
 -- AUTO_INCREMENT cho bảng `nhaphang`
@@ -44809,7 +44862,7 @@ ALTER TABLE `order`
 -- AUTO_INCREMENT cho bảng `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
 
 --
 -- AUTO_INCREMENT cho bảng `province`
@@ -44827,7 +44880,7 @@ ALTER TABLE `quanlykho`
 -- AUTO_INCREMENT cho bảng `seo`
 --
 ALTER TABLE `seo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=133;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=164;
 
 --
 -- AUTO_INCREMENT cho bảng `setting`
@@ -44863,7 +44916,7 @@ ALTER TABLE `supplier`
 -- AUTO_INCREMENT cho bảng `themes`
 --
 ALTER TABLE `themes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT cho bảng `users`

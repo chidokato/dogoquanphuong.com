@@ -13,6 +13,42 @@
   <div class="uk-width-large-5-6 body">
     
     @include('layout.slider')
+
+    <section class="commitment-section">
+      <div class="uk-container uk-container-center">
+        <div class="uk-grid uk-grid-medium uk-grid-width-medium-1-3 container">
+           
+          <div class="item">
+            <div class="box order-1">
+              <span class="icon">
+                <img src="data/icon-01.png" alt="">
+              </span>
+              <div class="title"><span>Dịch vụ uy tín chuyên nghiệp</span></div>
+            </div>
+          </div>
+           
+          <div class="item">
+            <div class="box order-2">
+              <span class="icon">
+                <img src="data/icon-02.png" alt="">
+              </span>
+              <div class="title"><span>Sản phẩm đa dạng, sang trọng, đẳng cấp</span></div>
+            </div>
+          </div>
+           
+          <div class="item">
+            <div class="box order-3">
+              <span class="icon">
+                <img src="data/icon-03.png" alt="">
+              </span>
+              <div class="title"><span>Thiết kế sáng tạo, dẫn đầu xu hướng</span></div>
+            </div>
+          </div>
+              </div>
+      </div>
+    </section>
+
+
     <section class="section5">
       <div class="uk-container-center">
         <header class="panel-head homes-tit-1">

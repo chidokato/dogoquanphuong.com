@@ -15,7 +15,7 @@
 .home-title .separator_wrapper{font-size: 1.8rem;border: 1px solid #333;padding: 20px;width: 50%;margin: 0 auto;background: #fff;position: inherit;z-index: 1;}
 .about-content{text-align: justify; font-size: 1.3rem; line-height: 1.5;} 
 .about-img img{height: 300px; width: 100%; object-fit: cover;} 
-.commitment-section {margin: 0 0 90px 0;}
+.commitment-section {margin: 30px 0 30px 0;}
 .div-room{-webkit-transform: perspective(1px) translateZ(0);transform: perspective(1px) translateZ(0);box-shadow: 0 0 1px transparent;-webkit-transition-duration: .3s;transition-duration: .3s;-webkit-transition-property: transform;transition-property: transform;}
 .div-room:hover{-webkit-transform: scale(1.1); transform: scale(1.1);}
 .section1{padding-bottom: 60px; padding-top: 30px}
@@ -117,7 +117,7 @@
 }
 .box-shadow{box-shadow: 2px 0 5px #c4c4c4;}
 .contact-info button{
-    background: url(icon-bao-gia.png) #222 5px no-repeat !important;
+    background: url(icon-bao-gia.png) #65462b 5px no-repeat !important;
     padding-left: 43px !important;
     background-size: 30px !important; color: #fff; padding: 5px;cursor: pointer;
 }

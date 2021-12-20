@@ -71,6 +71,8 @@ class c_product extends Controller
         $product->oldprice = $Request->oldprice;
         $product->saleoff = $Request->saleoff;
         $product->number = $Request->number;
+        $product->size = $Request->size;
+        $product->include = $Request->include;
         if(isset($Request->mausac)){$product->mausac_id = implode(',', $Request->mausac);}
         $product->save();
         // seo
@@ -206,6 +208,9 @@ class c_product extends Controller
         $product->oldprice = $Request->oldprice;
         $product->saleoff = $Request->saleoff;
         $product->number = $Request->number;
+        $product->number = $Request->number;
+        $product->size = $Request->size;
+        $product->include = $Request->include;
         if(isset($Request->mausac)){$product->mausac_id = implode(',', $Request->mausac);}
         else{$product->mausac_id='';}
         $product->save();

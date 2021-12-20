@@ -37,60 +37,61 @@
                 <div class="uk-width-large-1-2">
                   <div class="prd-desc">
                     <h1 class="prd-title"><span>{{$articles->name}}</span></h1>
-                    <div class="description">
+                    <div class="price">Giá: Liên hệ</div>
+                    <p>Kích thước: 2x5m</p>
+                    <p>Sản phẩm gồm: 1 bàn 6 ghế</p>
+                    <!-- <div class="description">
                         <p style="text-align: justify;">Gỗ công nghiệp là một trong số những chất liệu nội thất được nhiều người ưa chuộng bởi vẻ đẹp và chất lượng của nó. <strong>Tủ bếp gỗ công nghiệp đẹp</strong> của GleeHome có thiết kế hiện đại, tiện nghi và vô cùng sang trọng. <strong>Tủ bếp gỗ công nghiệp đẹp </strong>của chúng tôi còn là sản phẩm có chất lượng cao hứa hẹn sẽ là sự lựa chọn hoàn hảo cho phòng bếp gia đình.<br /></p>
-                    </div>
+                    </div> -->
                     <div class="call-groups">
                       <a class="btn uk-flex uk-flex-middle uk-flex-space-between" href="tel:0166.7272.072" title="Showroom 1" style="margin-right: 10px">
                         <div class="text">
-                          <span class="title">Gọi ngay</span>
-                          <span class="subtitle">Showroom 1</span>
+                          <span class="title">0911388799</span>
+                          <!-- <span class="subtitle">Showroom 1</span> -->
                         </div>
                         <!-- <span class="number"></span> -->
                       </a>
 
                       <a class="btn uk-flex uk-flex-middle uk-flex-space-between" href="tel:0911388799" title="Showroom 2">
                         <div class="text">
-                          <span class="title">Gọi ngay</span>
-                          <span class="subtitle">0911388799</span>
+                          <span class="title">0911388799</span>
+                          <!-- <span class="subtitle">0911388799</span> -->
                         </div>
                         <!-- <span class="number"></span> -->
                       </a>
                     </div>
-                    <div class="share-box uk-flex uk-flex-middle"> 
-                      <div class="facebook">
-                        <div class="fb-like" data-href="https://gleehome.com.vn/tu-bep-gtb19.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
-                      </div>
-                      <div class="plus">
-                        <div class="g-plusone" data-size="medium" data-href="tu-bep-gtb19.html"></div>
-                      </div>
-                    </div><!-- end .share-box -->
+                    
                     <div class="prd-commitment">
                       <ul class="uk-grid uk-grid-small uk-grid-width-1-3">
                         <li>
                           <div class="box">
-                            <span class="icon"><img src="templates/frontend/resources/img/camket.png" alt="" /></span>
+                            <span class="icon"><img src="data/camket.png" alt="" /></span>
                             <span class="value">Cam kết <br> chất lượng</span>
                           </div>
                         </li>
                         <li>
                           <div class="box">
-                            <span class="icon"><img src="templates/frontend/resources/img/giaohangmienphi.png" alt="" /></span>
+                            <span class="icon"><img src="data/giaohangmienphi.png" alt="" /></span>
                             <span class="value">Giao hàng <br> toàn quốc</span>
                           </div>
                         </li>
                         <li>
                           <div class="box">
-                            <span class="icon"><img src="templates/frontend/resources/img/thanhtoan.png" alt="" /></span>
+                            <span class="icon"><img src="data/thanhtoan.png" alt="" /></span>
                             <span class="value">Thanh toán <br> tại nhà</span>
                           </div>
                         </li>
                       </ul>
                     </div>
                     <div class="contact-info prd-contact uk-flex uk-flex-middle">
-                      <button>Tư vấn</button>
-                      <div class="price">Giá: liên hệ</div>
+                      <button style="margin-right: 20px;" onclick="myFunction()">Tư vấn</button>
+                      <button class="cart" onclick="cart()">Đặt hàng</button>
                     </div>
+
+                    <!-- <div class="prd-contact uk-flex uk-flex-middle" style="margin-top: 20px">
+                      <a class="btn btn-map" href="" title="Chỉ đường">Chỉ đường</a>
+                      <a class="btn btn-contact" href="tel:0941438688" title="Liên hệ">Liên hệ</a>
+                    </div> -->
                   </div><!-- .prd-desc -->
                 </div>
               </div><!-- .uk-grid -->
@@ -120,6 +121,19 @@
       </div>
   </div>
 </div>
+<style type="text/css">
+  .contact-info button{padding: 10px 20px; border-radius: 5px}
+  .prd-desc .price{
+        margin-bottom: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #cd2626;
+  }
+  .contact-info {
+    display: flex;
+    justify-content: flex-start;
+}
+</style>
 @endsection
 
 @section('css')

@@ -10,8 +10,7 @@ $().ready(function() {
                 maxlength: 100,
             },
             "category_id":{ required: true, },
-            
-            // "area":{ number: true, },
+            "price":{ number: true, },
             // "password": {
             //     required: true,
             //     minlength: 8
@@ -32,6 +31,9 @@ $().ready(function() {
             },
             "category_id": {
                 required: "Không được để trống",
+            },
+            "price": {
+                number: "Nhập số (vd: 8.4)",
             },
             
             // "area": {

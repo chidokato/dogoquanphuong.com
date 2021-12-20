@@ -65,6 +65,21 @@ if(isset($data)){
                 </div>
             </div>
         </div>
+        <div class="card shadow mb-4">
+            @if(isset($data))
+            <div class="card-body">
+                <div class="row detail-img">
+                    @foreach($data->images as $val)
+                    <div class="col-md-3" id="detail_img">
+                        <img src="data/product/{{$val->img}}">
+                        <button type="button" id="del_img_detail"> Xóa ảnh </button>
+                        <input type="hidden" name="id_img_detail" id="id_img_detail" value="{{$val->id}}" />
+                    </div>
+                    @endforeach
+                </div>
+            </div>
+            @endif
+        </div>
         @include('admin.layout.seooption')
     </div>
     <div class="col-xl-3 col-lg-3">
@@ -124,10 +139,18 @@ if(isset($data)){
                     <input value="{{ isset($data->product->number) ? $data->product->number : '' }}" type="number" name="number" class="form-control" placeholder="...">
                 </div> -->
 
-                <!-- <div class="form-group">
-                    <label>Giá bán</label>
-                    <input value="{{ isset($data->product->price) ? $data->product->price : '' }}" type="number" name="price" class="form-control" placeholder="...">
-                </div> -->
+                <div class="form-group">
+                    <label>Giá bán (triệu)</label>
+                    <input value="{{ isset($data->product->price) ? $data->product->price : '' }}" type="text" name="price" class="form-control" placeholder="...">
+                </div>
+                <div class="form-group">
+                    <label>Kích thước</label>
+                    <input value="{{ isset($data->product->size) ? $data->product->size : '' }}" type="text" name="size" class="form-control" placeholder="...">
+                </div>
+                <div class="form-group">
+                    <label>Bao gồm</label>
+                    <input value="{{ isset($data->product->include) ? $data->product->include : '' }}" type="text" name="include" class="form-control" placeholder="...">
+                </div>
                 
                 <!-- <div class="form-group">
                     <label>OldPrice</label>
@@ -140,6 +163,9 @@ if(isset($data)){
                 </div> -->
             </div>
         </div>
+
+        
+
         <div class="card shadow mb-4">
             <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                 <h6 class="m-0 font-weight-bold text-primary">Ảnh đại diện</h6>
@@ -165,19 +191,6 @@ if(isset($data)){
                     <p>Nhấn giữ <i style="color: red">Ctrl</i> để chọn nhiều ảnh !</p>
                 </div>
             </div>
-            @if(isset($data))
-            <div class="card-body">
-                <div class="row detail-img">
-                    @foreach($data->images as $val)
-                    <div class="col-md-6" id="detail_img">
-                        <img src="data/product/80/{{$val->img}}">
-                        <button type="button" id="del_img_detail"> Xóa ảnh </button>
-                        <input type="hidden" name="id_img_detail" id="id_img_detail" value="{{$val->id}}" />
-                    </div>
-                    @endforeach
-                </div>
-            </div>
-            @endif
         </div>
     </div>
 </div>
@@ -199,6 +212,24 @@ function openCity(evt, cityName) {
 }
 </script>
 
+<style type="text/css">
+    .detail-img .col-md-3 button {
+    position: absolute;
+    top: 0;
+    left: 12px;
+    background: #a51414;
+    color: #fff;
+    padding: 0px 4px;
+    cursor: pointer;
+    border: none;
+}
+.detail-img img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+</style>
 
 @endsection
 

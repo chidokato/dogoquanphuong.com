@@ -325,14 +325,14 @@
 .heading-2 {
 	margin: 0 0 15px 0;
 	padding-bottom: 10px;
-	border-bottom: 1px solid #6a0b0c;
+	border-bottom: 1px solid #65462b;
 	line-height: 24px;
 	font-size: 18px;
 	font-weight: normal;
 	font-family: 'UTM AVo Bold', sans-serif;
 	text-transform: uppercase;
 }
-.heading-2>* {color: #6a0b0c;}
+.heading-2>* {color: #65462b;}
 
 
 @media (min-width: 960px) {
@@ -388,7 +388,7 @@
 }
 .aside-categories .main li a:hover {
 	margin-left: 10px;
-	color: #6a0b0c;
+	color: #65462b;
 }
 .aside-product .list-product>li:not(:last-child), .aside-news .list-article>li:not(:last-child) {margin-bottom: 10px;}
 .aside-product .product .thumb,
@@ -424,12 +424,12 @@
 }
 .aside-product .product .title a:hover, 
 .aside-news .article .title a:hover {
-	color: #6a0b0c;
+	color: #65462b;
 }
 .aside-prd-detail .heading {
 	margin: 0;
 	padding: 10px 10px 10px 15px;
-	background: #6a0b0c;
+	background: #65462b;
 	font-size: 13px;
 	font-weight: normal;
 	font-family: 'UTM Avo Bold', sans-serif;
@@ -528,10 +528,10 @@
 .commitment-section .box .title {
 	margin: 0 0 8px 0;
 	max-height: 20px;
-	color: #65462b;
+	color: #fff;
 	font-size: 16px;
 	line-height: 29px;
-	font-weight: normal;
+	font-weight: bold;
 	font-family: 'UTM Avo Bold', sans-serif;
 	text-transform: uppercase;
 	/* overflow: hidden;  */
@@ -539,7 +539,6 @@
 	/* -ms-text-overflow: ellipsis;  */
 	/* text-overflow: ellipsis; */
 }
-.commitment-section .box.order-2 .title {color: #8c5719;}
 .commitment-section .box .description {
 	max-height: 40px;
 	font-size: 14px;
@@ -1696,7 +1695,7 @@
 	position: relative;
 	padding: 10px 20px 10px 90px;
 	margin-bottom: 20px;
-	background: #6a0b0c url(img/icon_phone.png) 25px 50% no-repeat;
+	background: #65462b url(img/icon_phone.png) 25px 50% no-repeat;
 	color: #fff;
 	font-size: 16px;
 	line-height: 22px;
@@ -1740,7 +1739,7 @@
 }
 .prd-detail .prd-contact .btn-contact:before {background: url(img/icon_contact.png) center no-repeat;}
 .prd-detail .prd-contact .btn+.btn {margin-left: 15px;}
-.prd-commitment {margin: 0 0 30px 0;}
+.prd-commitment {margin: 0 0 20px 0;}
 .prd-commitment .box {
 	position: relative;
 	padding-left: 40px;
@@ -1840,7 +1839,7 @@
 	font-size: 20px;
 	line-height:24px;
 	font-weight: bold;
-	color: #6a0b0c;
+	color: #65462b;
 }
 .art-detail .description {
 	margin: 0 0 10px 0;

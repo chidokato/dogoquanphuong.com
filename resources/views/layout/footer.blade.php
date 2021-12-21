@@ -98,7 +98,7 @@
 <div class="hotline-fixed uk-hidden-large">
   <a href="tel: 0911388799" title="Hotline">
     <span class="label">Hotline: </span>
-    <span class="value">{{$head_setting->Hotline}}</span>
+    <span class="value">{{$head_setting->hotline}}</span>
   </a>
 </div>
 <?php use App\menu; ?>

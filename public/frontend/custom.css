@@ -159,7 +159,50 @@
     text-align: center;
     color: #fff;
     border-radius: 50px;
+}.content{ text-align: justify; }
+.bgblack{
+  position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background: #0000006b; display: none; z-index: 999;
 }
+.form{
+  position: fixed;
+  top: 100px;
+  right: 40%;
+  width: 20%;
+  background: #fff;
+  z-index: 9999;
+  color: #000;
+  display: none;
+  box-shadow: 0px 0px 6px 2px #fff; 
+  padding: 15px;
+}
+.mystyle {
+  display: block;
+}
+.form .title{font-size: 1.2rem; text-align: center;background: #000; color: #fff; padding: 15px; margin-bottom: 10px;}
+.form input{ padding: 10px; width: 100%; margin-bottom: 10px; }
+.form textarea{ padding: 10px; width: 100%; margin-bottom: 10px; }
+.form .close{
+  position: absolute;
+    top: -10px;
+    right: -10px;
+    background: #000;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 50px;
+    box-shadow: 0px 0px 5px 5px #000;
+    cursor: pointer;
+    font-family: tahoma !important;
+    font-weight: bold;
+}
+.content{
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #ddd;
+    }
+    .banner img{ width: 100% }
 
 @-webkit-keyframes fadeEffect {
   from {opacity: 0;}
@@ -170,9 +213,63 @@ from {opacity: 0;}
 to {opacity: 1;}
 }
 
+
+
 @media (max-width: 479px) {
-	.body{padding-left: 25px}
-	.body .section5 {
-	    padding: 30px 5px;
-	}
+
+.body{padding-left: 25px}
+.body .section5 {
+    padding: 10px 5px;
+}
+.mobile-header .upper {padding: 0px 10px;}
+.logo img {
+     width: auto; 
+    margin: 5px;
+    height: 30px;
+}
+.commitment-section .box .icon{ width: 36px;    top: 73%; }
+.commitment-section {
+margin: 18px 0 18px 0;
+}
+.product .img-cover img {
+    height: 105px;}
+    .product .infor {
+    padding: 5px;}
+.product .infor a {
+    font-size: 1rem;
+}
+.contact-info {
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+}.contact-info button{ margin-bottom: 5px; }
+.prd-commitment ul{ display: flex;flex-direction: row;
+    justify-content: space-between; }.contact-info {
+    justify-content: flex-start;
+    /*flex-direction: row;*/
+}.ditail-img li img {
+    height: 200px;
+}
+
+.lib-grid-20>* {
+    padding-left: 6px;
+}
+.lib-grid-20 {
+    margin-left: -5px;
+}
+
+.form {
+    top: 100px;
+    right: 5%;
+    width: 90%;}
+
+
+
+
+
+
+
+
+
+
 }

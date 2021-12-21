@@ -44,41 +44,5 @@ function cart() {
 
 
 <style>
-.bgblack{
-  position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background: #0000006b; display: none; z-index: 999;
-}
-.form{
-  position: fixed;
-  top: 100px;
-  right: 40%;
-  width: 20%;
-  background: #fff;
-  z-index: 9999;
-  color: #000;
-  display: none;
-  box-shadow: 0px 0px 6px 2px #fff; 
-  padding: 15px;
-}
-.mystyle {
-  display: block;
-}
-.form .title{font-size: 1.2rem; text-align: center;background: #000; color: #fff; padding: 15px; margin-bottom: 10px;}
-.form input{ padding: 10px; width: 100%; margin-bottom: 10px; }
-.form textarea{ padding: 10px; width: 100%; margin-bottom: 10px; }
-.form .close{
-  position: absolute;
-    top: -10px;
-    right: -10px;
-    background: #000;
-    color: #fff;
-    width: 20px;
-    height: 20px;
-    text-align: center;
-    line-height: 20px;
-    border-radius: 50px;
-    box-shadow: 0px 0px 5px 5px #000;
-    cursor: pointer;
-    font-family: tahoma !important;
-    font-weight: bold;
-}
+
 </style>

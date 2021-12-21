@@ -1825,8 +1825,8 @@
 	    -ms-background-size: 30px;
 	    background-size: 30px;
 	}
-	.prd-commitment ul>li {width: 100%;}
-	.prd-commitment ul>li+li {margin-top: 10px;}
+	.prd-commitment ul>li {}
+	.prd-commitment ul>li+li {}
 	.prd-commitment .box {padding: 10px 0 10px 50px;}
 	.prd-commitment .value br {display: none;}
 	.prd-gallerys .lightSlider.lsGrab .image {height: 250px;}

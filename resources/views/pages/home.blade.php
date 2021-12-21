@@ -12,14 +12,13 @@
     @include('layout.menu_pc')
   </div>
   <div class="uk-width-large-5-6 body">
-    
+    @include('layout.header')
     @include('layout.slider')
 
     <section class="commitment-section">
       <div class="uk-container uk-container-center">
         <div class="uk-grid uk-grid-medium uk-grid-width-medium-1-3 container">
-           
-          <div class="item">
+            <div class="item">
             <div class="box order-1">
               <span class="icon">
                 <img src="data/icon-01.png" alt="">
@@ -45,7 +44,7 @@
               <div class="title"><span>Thiết kế sáng tạo, dẫn đầu xu hướng</span></div>
             </div>
           </div>
-              </div>
+        </div>
       </div>
     </section>
 

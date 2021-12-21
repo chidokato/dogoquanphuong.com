@@ -17,7 +17,7 @@
       <div class="uk-container-center">
       <div class="panel-body">
       <div class="uk-grid ">
-        <div class="uk-width-large-3-4 menu-left uk-visible-large">
+        <div class="uk-width-large-3-4 menu-left ">
           <section class="prd-detail">
             <section class="panel-body">
               <div class="uk-grid uk-grid-medium">
@@ -83,7 +83,7 @@
                         </li>
                       </ul>
                     </div>
-                    <div class="contact-info prd-contact uk-flex uk-flex-middle">
+                    <div class="contact-info prd-contact uk-flex uk-flex-middle" style="display: flex;flex-direction: row;">
                       <button style="margin-right: 20px;" onclick="myFunction()">Tư vấn</button>
                       <button class="cart" onclick="cart()">Đặt hàng</button>
                     </div>
@@ -101,6 +101,9 @@
             <header class="panel-head homes-tit-1">
               <h2 style="font-weight: 100;">Chi tiết sản phẩm</h2>
             </header>
+            <div class="content">
+                {!! $articles->content !!}
+            </div>
             <ul class="uk-grid lib-grid-20 uk-grid-width-1-1 uk-grid-width-medium-1-2 uk-grid-width-large-1-2 ditail-img">
               @foreach($articles->images as $img)
               <li>

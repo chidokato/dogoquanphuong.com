@@ -101,16 +101,36 @@
     <span class="value">0911388799</span>
   </a>
 </div>
-
+<?php use App\menu; ?>
 <div id="offcanvas" class="uk-offcanvas offcanvas">
   <div class="uk-offcanvas-bar">
     <form class="uk-search" action="" data-uk-search="">
         <input class="uk-search-field" type="search" name="keyword" placeholder="Tìm kiếm...">
         </form>
-    <ul class="l1 uk-nav uk-nav-offcanvas uk-nav uk-nav-parent-icon" data-uk-nav>
-      <li><a href=".">Trang chủ</a></li>
-      <li><a href="dat-nen">Đất Nền</a></li>
-    </ul>
+   <ul class="l1 uk-nav uk-nav-offcanvas uk-nav uk-nav-parent-icon" data-uk-nav>
+    <li class="l1 ">
+      <a href="{{asset('')}}" class="l1">Trang chủ</a>
+    </li>
+    @foreach($menu_product as $val)
+    <?php $sub_menu = menu::where('status','true')->where('parent', $val->id)->orderBy('view','asc')->get(); ?>
+    @if(count($sub_menu) == 0)
+    <li class="l1 ">
+      <a href="{{$val->slug}}" class="l1">{{$val->name}}</a>
+    </li>
+    @else
+    <li class="l1 uk-parent uk-position-relative">
+      <a href="#" title="" class="dropicon"></a>
+      <a href="{{$val->slug}}" title="Nội thất phòng khách" class="l1">{{$val->name}}</a>
+      <ul class="l2 uk-nav-sub">
+          @foreach($sub_menu as $sub)
+          <li class="l2"><a href="{{$sub->slug}}" title="Tủ giầy" class="l2">{{$sub->name}}</a></li>
+          @endforeach
+        </ul>
+    </li>
+    @endif
+    @endforeach
+    
+  </ul>
   </div>
 </div><!-- #offcanvas --> 
 

@@ -9,9 +9,9 @@
             </header>
             <section class="panel-body">
               <ul class="uk-list list">
-                <li class="location">Văn Phòng Showroom tại: Tầng 3 - 91 Nguyễn Khang - Cầu Giấy - Hà Nội</li>
-                <li class="phone"><a href="tel: 02463261799" title="Hotline">02463261799</a></li>
-                <li class="email"><a href="mailto: Minhtk1730@gmail.com" title="Email">Minhtk1730@gmail.com</a></li>
+                <li class="location">{{$head_setting->address}}</li>
+                <li class="phone"><a href="tel: {{$head_setting->hotline}}" title="Hotline">{{$head_setting->hotline}}</a></li>
+                <li class="email"><a href="mailto: Minhtk1730@gmail.com" title="Email">{{$head_setting->email}}</a></li>
               </ul>
             </section>
           </section><!-- .panel -->
@@ -67,7 +67,7 @@
               <h3 class="heading"><span>Giới thiệu</span></h3>
             </header>
             <section class="panel-body">
-              <div class="title" style="color:#fff !important;"><p><font color="#545454" face="arial, sans-serif" size="2">Nội thất Glee là đơn vị thiết kế và thi công sản phẩm nội thất&nbsp;hàng đầu của miền Bắc, luôn lấy được sự hài lòng và thiện cảm tuyệt đối từ khách hàng, chế độ bảo hành dài hạn...</font></p>
+              <div class="title" style="color:#fff !important;"><p><font color="#545454" face="arial, sans-serif" size="2">Đồ gỗ Quân Phương là đơn vị thiết kế và xản suất đồ gỗ nguyên khối hàng đầu của miền Bắc, luôn lấy được sự hài lòng và thiện cảm tuyệt đối từ khách hàng, chế độ bảo hành dài hạn...</font></p>
 </div>
               
             </section>
@@ -80,7 +80,7 @@
   <section class="lower">
     <div class="uk-container uk-container-center customer-container"> 
       <div class="uk-flex uk-flex-middle uk-flex-space-between container">
-        <div class="copyright">© 2017 by <a href="#" title="">Glee</a>. All rights reserved | Design by <span onclick="return false;" title="HTVietNam">HTVietNam</span></div>
+        <div class="copyright">© 2021 by <a href="#" title="">chidokato</a>. All rights reserved | Design by <span onclick="return false;" title="chidokato">chidokato</span></div>
         <div class="ft-social uk-visible-large">
           <ul class="uk-list uk-clearfix">
             <li class="facebook"><a href="#" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
@@ -98,7 +98,7 @@
 <div class="hotline-fixed uk-hidden-large">
   <a href="tel: 0911388799" title="Hotline">
     <span class="label">Hotline: </span>
-    <span class="value">0911388799</span>
+    <span class="value">{{$head_setting->Hotline}}</span>
   </a>
 </div>
 <?php use App\menu; ?>

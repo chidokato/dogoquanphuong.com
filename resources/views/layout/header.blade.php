@@ -36,9 +36,9 @@
             <span>Menu</span>
         </a>
         <div class="logo"><a href="#" title="Logo"><img src="data/themes/{{$logo->img}}" alt="Logo"></a></div>
-        <a class="mobile-hotline" href="tel: 0911388799" title="Hotline">
+        <a class="mobile-hotline" href="tel: {{$head_setting->hotline}}" title="Hotline">
             <span class="label">Hotline: </span>
-            <span class="value">0911388799</span>
+            <span class="value">{{$head_setting->hotline}}</span>
         </a>
     </section><!-- .upper -->
     <!-- <section class="lower">

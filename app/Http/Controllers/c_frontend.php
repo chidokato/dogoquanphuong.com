@@ -133,7 +133,7 @@ class c_frontend extends Controller
         $lienquan = articles::where('status','true')
             ->where('category_id',$articles->category_id)
             ->whereNotin('id',[$id])
-            ->take(8)
+            ->take(6)
             ->get();
         if ($articles->sort_by==1) {
             return view('pages.articles',[

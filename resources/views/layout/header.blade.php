@@ -52,11 +52,9 @@
     </section> -->
     <section class="menu-mobile">
       <ul>
-        <li><a href="">Sofa</a></li>
-        <li><a href="">Mặt bàn</a></li>
-        <li><a href="">Giảm giá</a></li>
-        <li><a href="">Video</a></li>
-        <li><a href="">Liên hệ</a></li>
+        @foreach($menu_mobile as $val)
+        <li><a href="{{$val->slug}}">{{$val->name}}</a></li>
+        @endforeach
       </ul>
     </section>
     <style type="text/css">

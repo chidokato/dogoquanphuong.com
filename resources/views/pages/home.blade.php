@@ -18,20 +18,10 @@
       <ul class="uk-grid lib-grid-20 uk-grid-width-1-3 uk-grid-width-medium-1-3 uk-grid-width-large-1-3 list-product" data-uk-grid-match="{target:'.title'}">
         @foreach($Category_mobile_homes as $val)
         <li class="cat-mobile">
-          <div class="img"><img src="data/category/{{$val->img}}"></div>
-          <p>{{$val->name}}</p>
-        </li>
-        @endforeach
-        @foreach($Category_mobile_homes as $val)
-        <li class="cat-mobile">
-          <div class="img"><img src="data/category/{{$val->img}}"></div>
-          <p>{{$val->name}}</p>
-        </li>
-        @endforeach
-        @foreach($Category_mobile_homes as $val)
-        <li class="cat-mobile">
-          <div class="img"><img src="data/category/{{$val->img}}"></div>
-          <p>{{$val->name}}</p>
+          <a href="{{$val->slug}}">
+            <div class="img"><img src="data/category/{{$val->img}}"></div>
+            <p>{{$val->name}}</p>
+          </a>
         </li>
         @endforeach
       </ul>

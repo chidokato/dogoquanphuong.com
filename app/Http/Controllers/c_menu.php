@@ -50,7 +50,6 @@ class c_menu extends Controller
 
     public function postadd(Request $Request)
     {
-        $this->validate($Request,['name' => 'Required|unique:menu,name'],[] );
     	$menu = new menu;
         $menu->user_id = Auth::User()->id;
         $menu->name = $Request->name;
@@ -90,7 +89,6 @@ class c_menu extends Controller
 
     public function postedit(Request $Request,$id)
     {
-        $this->validate($Request,['name' => 'Required'],[] );      
         $menu = menu::find($id);
         $menu->name = $Request->name;
         $menu->slug = $Request->slug;

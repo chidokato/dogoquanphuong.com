@@ -14,7 +14,28 @@
   <div class="uk-width-large-5-6 body">
     @include('layout.header')
     @include('layout.slider')
-
+    <section class="uk-container uk-container-center uk-hidden-large">
+      <ul class="uk-grid lib-grid-20 uk-grid-width-1-3 uk-grid-width-medium-1-3 uk-grid-width-large-1-3 list-product" data-uk-grid-match="{target:'.title'}">
+        @foreach($Category_mobile_homes as $val)
+        <li class="cat-mobile">
+          <div class="img"><img src="data/category/{{$val->img}}"></div>
+          <p>{{$val->name}}</p>
+        </li>
+        @endforeach
+        @foreach($Category_mobile_homes as $val)
+        <li class="cat-mobile">
+          <div class="img"><img src="data/category/{{$val->img}}"></div>
+          <p>{{$val->name}}</p>
+        </li>
+        @endforeach
+        @foreach($Category_mobile_homes as $val)
+        <li class="cat-mobile">
+          <div class="img"><img src="data/category/{{$val->img}}"></div>
+          <p>{{$val->name}}</p>
+        </li>
+        @endforeach
+      </ul>
+    </section>
     <section class="commitment-section">
       <div class="uk-container uk-container-center">
         <div class="uk-grid uk-grid-medium uk-grid-width-medium-1-3 container">

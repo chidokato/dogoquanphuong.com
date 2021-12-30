@@ -65,9 +65,9 @@ class c_menu extends Controller
         $menu->view = $Request->view;
         if ($Request->hasFile('img')) {
             $file = $Request->file('img'); $filename = $file->getClientOriginalName();
-            while(file_exists("data/menu/".$filename)){$filename = str_random(4)."_".$filename;}
-            $img = Image::make($file)->resize(120, 120, function ($constraint) {$constraint->aspectRatio();})->save(public_path('data/menu/thumbnail/'.$filename));
-            $img = Image::make($file)->resize(1000, 1000, function ($constraint) {$constraint->aspectRatio();})->save(public_path('data/menu/'.$filename));
+            while(file_exists("data/category/".$filename)){$filename = str_random(4)."_".$filename;}
+            $img = Image::make($file)->resize(120, 120, function ($constraint) {$constraint->aspectRatio();})->save(public_path('data/category/thumbnail/'.$filename));
+            $img = Image::make($file)->resize(1000, 1000, function ($constraint) {$constraint->aspectRatio();})->save(public_path('data/category/'.$filename));
             $menu->img = $filename;
         }
         $menu->save();
@@ -106,14 +106,14 @@ class c_menu extends Controller
         }
         if ($Request->hasFile('img')) {
             // xóa ảnh cũ
-            if(File::exists('data/menu/thumbnail/'.$menu->img)) { File::delete('data/menu/'.$menu->img); File::delete('data/menu/thumbnail/'.$menu->img); }
+            if(File::exists('data/category/thumbnail/'.$menu->img)) { File::delete('data/menu/'.$menu->img); File::delete('data/category/thumbnail/'.$menu->img); }
             // xóa xảnh cũ
             // thêm ảnh mới
             $file = $Request->file('img');
             $filename = $file->getClientOriginalName();
-            while(file_exists("data/menu/".$filename)){$filename = str_random(4)."_".$filename;}
-            $img = Image::make($file)->resize(120, 120, function ($constraint) {$constraint->aspectRatio();})->save(public_path('data/menu/thumbnail/'.$filename));
-            $img = Image::make($file)->resize(1000, 1000, function ($constraint) {$constraint->aspectRatio();})->save(public_path('data/menu/'.$filename));
+            while(file_exists("data/category/".$filename)){$filename = str_random(4)."_".$filename;}
+            $img = Image::make($file)->resize(120, 120, function ($constraint) {$constraint->aspectRatio();})->save(public_path('data/category/thumbnail/'.$filename));
+            $img = Image::make($file)->resize(1000, 1000, function ($constraint) {$constraint->aspectRatio();})->save(public_path('data/category/'.$filename));
             $menu->img = $filename;
             // thêm ảnh mới
         }
@@ -129,9 +129,9 @@ class c_menu extends Controller
             return redirect('admin/menu/list')->with('Error','Error parent');
         }else{
             $menu = menu::find($id);
-            if(File::exists('data/menu/'.$menu->img)) {
-                File::delete('data/menu/'.$menu->img);
-                File::delete('data/menu/thumbnail/'.$menu->img); }
+            if(File::exists('data/category/'.$menu->img)) {
+                File::delete('data/category/'.$menu->img);
+                File::delete('data/category/thumbnail/'.$menu->img); }
             $menu->delete();
             return redirect('admin/menu/list')->with('Success','Success');
         }
@@ -146,9 +146,9 @@ class c_menu extends Controller
                     return redirect('admin/menu/list')->with('Error','Error parent');
                 }else{
                     $menu = menu::find($id);
-                    if(File::exists('data/menu/'.$menu->img)) {
-                        File::delete('data/menu/'.$menu->img);
-                        File::delete('data/menu/thumbnail/'.$menu->img); }
+                    if(File::exists('data/category/'.$menu->img)) {
+                        File::delete('data/category/'.$menu->img);
+                        File::delete('data/category/thumbnail/'.$menu->img); }
                     $menu->delete();
                 }
             }

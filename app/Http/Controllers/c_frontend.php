@@ -24,6 +24,8 @@ class c_frontend extends Controller
         $cat_pro = menu::where('classify','Product menu')->where('status','true')->where('parent', 0)->orderBy('view','asc')->get();
         $menu_top = menu::where('classify','Menu top')->where('status','true')->where('parent', 0)->orderBy('view','asc')->get();
         $menu_product = menu::where('classify','Product menu')->where('status','true')->where('parent', 0)->orderBy('view','asc')->get();
+        $menu_mobile = menu::where('classify','Mobile menu')->where('status','true')->where('parent', 0)->orderBy('view','asc')->get();
+        $Category_mobile_homes = menu::where('classify','Category mobile homes')->where('status','true')->where('parent', 0)->orderBy('view','asc')->get();
         
         view()->share( [
             'logo'=>$logo,
@@ -32,6 +34,8 @@ class c_frontend extends Controller
             'cat_pro'=>$cat_pro,
             'menu_top'=>$menu_top,
             'menu_product'=>$menu_product,
+            'menu_mobile'=>$menu_mobile,
+            'Category_mobile_homes'=>$Category_mobile_homes,
         ]);
     }
 

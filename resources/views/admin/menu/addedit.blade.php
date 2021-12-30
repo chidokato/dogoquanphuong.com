@@ -76,6 +76,8 @@
                                     <option <?php if(isset($data) && $data->classify == 'Product menu'){echo 'selected';} ?> value="Product menu">Product menu</option>
                                     <option <?php if(isset($data) && $data->classify == 'Menu top'){echo 'selected';} ?> value="Menu top">Menu top</option>
                                     <option <?php if(isset($data) && $data->classify == 'Main botton'){echo 'selected';} ?> value="Main botton">Main botton</option>
+                                    <option <?php if(isset($data) && $data->classify == 'Mobile menu'){echo 'selected';} ?> value="Mobile menu">Mobile menu</option>
+                                    <option <?php if(isset($data) && $data->classify == 'Category mobile homes'){echo 'selected';} ?> value="Category mobile homes">Category mobile homes</option>
                                 </select>
                             </div>
                         </div>
@@ -110,7 +112,7 @@
             <div class="card-body">
                 <div class="file-upload">
                     <div class="file-upload-content" onclick="$('.file-upload-input').trigger( 'click' )">
-                        <img class="file-upload-image" src="{{ isset($data) ? 'data/menu/'.$data->img : 'data/no_image.jpg' }}" />
+                        <img class="file-upload-image" src="{{ isset($data) ? 'data/category/'.$data->img : 'data/no_image.jpg' }}" />
                     </div>
                     <div class="image-upload-wrap">
                         <input name="img" class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />

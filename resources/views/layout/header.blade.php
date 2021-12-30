@@ -50,4 +50,23 @@
             <div class="searchResult"></div>
         </div>
     </section> -->
+    <section class="menu-mobile">
+      <ul>
+        <li><a href="">Sofa</a></li>
+        <li><a href="">Mặt bàn</a></li>
+        <li><a href="">Giảm giá</a></li>
+        <li><a href="">Video</a></li>
+        <li><a href="">Liên hệ</a></li>
+      </ul>
+    </section>
+    <style type="text/css">
+      .menu-mobile{}
+      .menu-mobile ul{ display: flex; justify-content: space-around; }
+      .menu-mobile ul li{ list-style: none;
+    padding: 5px;
+    border-right: 1px solid #ddd;
+    width: 20%;
+    text-align: center; }
+      .menu-mobile ul li a{  }
+    </style>
 </header>

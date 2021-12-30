@@ -25,6 +25,9 @@ class c_menu extends Controller
         if($Request->key){
             $menu->where('name','like',"%$Request->key%");
         }
+        if($Request->sort_by){
+            $menu->where('classify',$Request->sort_by);
+        }
         if(isset($Request->datefilter)){
             $datefilter = explode(" - ", $Request->datefilter);
             $day1 = date('Y-m-d',strtotime($datefilter[0]));

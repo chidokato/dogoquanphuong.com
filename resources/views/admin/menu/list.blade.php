@@ -9,6 +9,15 @@
             <input value="{{ isset($key) ? $key : '' }}" name="key" type="text" class="form-control mr-3" placeholder="Name...">
         </div>
         <input type="text" class="form-control mr-3" name="datefilter" value="{{ isset($datefilter) ? $datefilter : '' }}" placeholder='Created at ...' />
+        <select name="sort_by" class="form-control mr-3">
+            <option value="">Classify</option>
+            <option value="Main menu">Main menu</option>
+            <option value="Product menu">Product menu</option>
+            <option value="Menu top">Menu top</option>
+            <option value="Main botton">Main botton</option>
+            <option value="Mobile menu">Mobile menu</option>
+            <option value="Category mobile homes">Category mobile homes</option>
+        </select>
         <select style="width: 100px;" class="form-control mr-3" name="paginate">
             <option <?php if(isset($paginate) && $paginate=='50'){echo "selected";} ?> value="50">50</option>
             <option <?php if(isset($paginate) && $paginate=='100'){echo "selected";} ?> value="100">100</option>
@@ -56,7 +65,7 @@
                                 <th>View</th>
                                 <th>Status</th>
                                 <th>User</th>
-                                <th>Sort By</th>
+                                <th>Classify</th>
                                 <th>date</th>
                                 <th></th>
                             </tr>

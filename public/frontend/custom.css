@@ -223,7 +223,10 @@ to {opacity: 1;}
     padding: 15px;
     line-height: 48px;margin-bottom: 5px;
 }
-
+.cat-mobile a{color: #6c4e34;}
+.menu-mobile ul li a {
+    color: #6c4e34;
+}
 
 @media (max-width: 479px) {
 

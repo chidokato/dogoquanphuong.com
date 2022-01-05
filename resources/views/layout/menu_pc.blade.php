@@ -7,11 +7,11 @@
 	<ul>
 		@foreach($menu_product as $val)
 		<?php $sub_menu1 = menu::where('status','true')->where('parent', $val->id)->orderBy('view','asc')->get(); ?>
-		<li><a href="{{$val->slug}}">{{$val->name}}</a>
+		<li><a href="{{$val->slug}}"><img src="data/category/{{$val->img}}"> {{$val->name}}</a>
 			@if(count($sub_menu1) > 0)
 			<ul class="sub-menu">
 			@foreach($sub_menu1 as $sub)
-	          <li><a href="{{$sub->slug}}">{{$sub->name}}</a></li>
+	          <li><a href="{{$sub->slug}}"><img src="data/category/{{$val->img}}"> {{$sub->name}}</a></li>
 	          @endforeach
 			</ul>
 			@endif

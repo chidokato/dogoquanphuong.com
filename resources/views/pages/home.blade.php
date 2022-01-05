@@ -77,7 +77,7 @@
                   <div class="infor">
                       <h3 class="title"><a href="{{$val->category->slug}}/{{$val->slug}}">{{$val->name}}</a></h3>
                       <div class="contact-info">
-                        <button>Tư vấn</button>
+                        <button onclick="myFunction()">Tư vấn</button>
                         <div class="price">Giá: liên hệ</div>
                       </div>
                       <!-- <div class="address">Phường Xuân Tảo, Quận Bắc Từ Liêm, Hà Nội</div>
@@ -118,7 +118,7 @@
                   <div class="infor">
                       <h3 class="title"><a href="{{$val->category->slug}}/{{$val->slug}}">{{$val->name}}</a></h3>
                       <div class="contact-info">
-                        <button>Tư vấn</button>
+                        <button onclick="myFunction()">Tư vấn</button>
                         <div class="price">Giá: liên hệ</div>
                       </div>
                       <!-- <div class="address">Phường Xuân Tảo, Quận Bắc Từ Liêm, Hà Nội</div>

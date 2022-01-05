@@ -115,15 +115,15 @@
     <?php $sub_menu = menu::where('status','true')->where('parent', $val->id)->orderBy('view','asc')->get(); ?>
     @if(count($sub_menu) == 0)
     <li class="l1 ">
-      <a href="{{$val->slug}}" class="l1">{{$val->name}}</a>
+      <a href="{{$val->slug}}" class="l1"><img src="data/category/{{$val->img}}"> {{$val->name}}</a>
     </li>
     @else
     <li class="l1 uk-parent uk-position-relative">
       <a href="#" title="" class="dropicon"></a>
-      <a href="{{$val->slug}}" title="Nội thất phòng khách" class="l1">{{$val->name}}</a>
+      <a href="{{$val->slug}}" class="l1"><img src="data/category/{{$val->img}}"> {{$val->name}}</a>
       <ul class="l2 uk-nav-sub">
           @foreach($sub_menu as $sub)
-          <li class="l2"><a href="{{$sub->slug}}" title="Tủ giầy" class="l2">{{$sub->name}}</a></li>
+          <li class="l2"><a href="{{$sub->slug}}" class="l2"><img src="data/category/{{$val->img}}"> {{$sub->name}}</a></li>
           @endforeach
         </ul>
     </li>

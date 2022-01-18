@@ -94,8 +94,8 @@
 </div> -->
 
 <div class="social-button">
-    <div class="social-button-content">
-       <a href="tel:0981481368" class="call-icon" rel="nofollow">
+    <div class="social-button-content" style="display: none;">
+       <a href="tel:{{$head_setting->hotline}}" class="call-icon" rel="nofollow">
           <i class="fa fa-whatsapp" aria-hidden="true"></i>
           <div class="animated alo-circle"></div>
           <div class="animated alo-circle-fill  "></div>

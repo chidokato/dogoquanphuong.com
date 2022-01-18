@@ -1,8 +1,12 @@
-<footer class="footer"><!-- FOOTER -->
+<div class="uk-grid ">
+  <div class="uk-width-large-1-6 menu-left uk-visible-large">
+  </div>
+  <div class="uk-width-large-5-6 body">
+    <footer class="footer"><!-- FOOTER -->
   <div class="uk-container uk-container-center customer-container">
     <section class="upper">
       <div class="uk-grid uk-grid-medium">
-        <div class="uk-width-small-1-2 uk-width-large-1-4 uk-width-xlarge-1-5">
+        <div class="uk-width-small-1-2 uk-width-large-1-4 uk-width-xlarge-1-4">
           <section class="panel ft-contact">
             <header class="panel-head">
               <h3 class="heading"><span>Thông tin liên hệ</span></h3>
@@ -16,52 +20,36 @@
             </section>
           </section><!-- .panel -->
         </div>
-                                <div class="uk-width-small-1-2 uk-width-large-1-4 uk-width-xlarge-1-5">
+        <div class="uk-width-small-1-2 uk-width-large-1-4 uk-width-xlarge-1-4">
+          <section class="panel">
+            <header class="panel-head">
+              <h3 class="heading"><span>Danh mục sản phẩm</span></h3>
+            </header>
+            <section class="panel-body">
+              <ul class="uk-list site-link">
+                @foreach($menu_product as $val)
+                <li><a href="{{$val->slug}}">{{$val->name}}</a></li>
+                @endforeach
+              </ul>
+            </section>
+          </section><!-- .panel -->
+        </div>
+        <div class="uk-width-small-1-2 uk-width-large-1-4 uk-width-xlarge-1-4">
           <section class="panel">
             <header class="panel-head">
               <h3 class="heading"><span>Danh mục</span></h3>
             </header>
-                        <section class="panel-body">
+            <section class="panel-body">
               <ul class="uk-list site-link">
-                              <li><a href=".html" title="">Thiết kế kiến trúc</a></li>
-                              <li><a href=".html" title="">Thiết kế nội thất</a></li>
-                              <li><a href=".html" title="">Bàn ghế phòng khách</a></li>
-                            </ul>
+                @foreach($menu_top as $val)
+                <li><a href="{{$val->slug}}">{{$val->name}}</a></li>
+                @endforeach
+              </ul>
             </section>
-                      </section><!-- .panel -->
+          </section><!-- .panel -->
         </div>
-                <div class="uk-width-small-1-2 uk-width-large-1-4 uk-width-xlarge-1-5">
-          <section class="panel">
-            <header class="panel-head">
-              <h3 class="heading"><span>Tin tức</span></h3>
-            </header>
-                        <section class="panel-body">
-              <ul class="uk-list site-link">
-                              <li><a href=".html" title="">Tin tức và sự kiện</a></li>
-                              <li><a href=".html" title="">Tin trong ngành</a></li>
-                              <li><a href=".html" title="">Tin nội bộ</a></li>
-                              <li><a href=".html" title="">Tin sản phẩm</a></li>
-                              <li><a href=".html" title="">Tin tuyển dụng</a></li>
-                            </ul>
-            </section>
-                      </section><!-- .panel -->
-        </div>
-                <div class="uk-width-small-1-2 uk-width-large-1-4 uk-width-xlarge-1-5">
-          <section class="panel">
-            <header class="panel-head">
-              <h3 class="heading"><span>Sản phẩm</span></h3>
-            </header>
-                        <section class="panel-body">
-              <ul class="uk-list site-link">
-                              <li><a href=".html" title="">Giường ngủ</a></li>
-                              <li><a href=".html" title="">Tủ quần áo</a></li>
-                              <li><a href=".html" title="">Tủ bếp</a></li>
-                              <li><a href=".html" title="">Ghế sofa</a></li>
-                            </ul>
-            </section>
-                      </section><!-- .panel -->
-        </div>
-                <div class="uk-width-small-1-2 uk-width-large-1-4 uk-width-xlarge-1-5 lib-visible-xlarge">
+        
+        <div class="uk-width-small-1-2 uk-width-large-1-4 uk-width-xlarge-1-4 lib-visible-xlarge">
           <section class="panel ft-subscribe">
             <header class="panel-head">
               <h3 class="heading"><span>Giới thiệu</span></h3>
@@ -94,13 +82,166 @@
     </div>
   </section><!-- .lower -->
 </footer>
+  </div>
+</div>
 
-<div class="hotline-fixed uk-hidden-large">
+
+<!-- <div class="hotline-fixed uk-hidden-large">
   <a href="tel: 0911388799" title="Hotline">
     <span class="label">Hotline: </span>
     <span class="value">{{$head_setting->hotline}}</span>
   </a>
-</div>
+</div> -->
+
+<div class="social-button">
+    <div class="social-button-content">
+       <a href="tel:0981481368" class="call-icon" rel="nofollow">
+          <i class="fa fa-whatsapp" aria-hidden="true"></i>
+          <div class="animated alo-circle"></div>
+          <div class="animated alo-circle-fill  "></div>
+           <span>Hotline: {{$head_setting->hotline}}</span>
+        </a>
+        <!-- <a href="sms:0981481368" class="sms">
+          <i class="fa fa-weixin" aria-hidden="true"></i>
+          <span>SMS: 098 148 1368</span>
+        </a> -->
+        <a target="_blank" href="{{$head_setting->facebook}}" class="mes">
+          <i class="fa fa-facebook-square" aria-hidden="true"></i>
+          <span>Nhắn tin Facebook</span>
+        </a>
+        <a target="_blank" href="http://zalo.me/{{$head_setting->hotline}}" class="zalo">
+          <i class="fa fa-commenting-o" aria-hidden="true"></i>
+          <span>Zalo: {{$head_setting->hotline}}</span>
+        </a>
+    </div>
+       
+    <a class="user-support">
+      <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+      <div class="animated alo-circle"></div>
+      <div class="animated alo-circle-fill"></div>
+    </a>
+  </div>
+
+  <style>
+    .social-button{
+      display: inline-grid;
+        position: fixed;
+        bottom: 15px;
+        left: 45px;
+        min-width: 45px;
+        text-align: center;
+        z-index: 99999;
+    }
+    .social-button-content{
+      display: inline-grid;   
+    }
+    .social-button a {padding:8px 0;cursor: pointer;position: relative;}
+    .social-button i{
+      width: 40px;
+        height: 40px;
+        background: #65462b;
+        color: #fff;
+        border-radius: 100%;
+        font-size: 20px;
+        text-align: center;
+        line-height: 1.9;
+        position: relative;
+        z-index: 999;box-shadow: 0px 0px 2px 2px;
+    }
+    .social-button span{
+      display: none;
+    }
+    .alo-circle {
+        animation-iteration-count: infinite;
+        animation-duration: 1s;
+        animation-fill-mode: both;
+        animation-name: zoomIn;
+        width: 50px;
+        height: 50px;
+        top: 3px;
+        right: -3px;
+        position: absolute;
+        background-color: transparent;
+        -webkit-border-radius: 100%;
+        -moz-border-radius: 100%;
+        border-radius: 100%;
+        border: 2px solid rgba(101 70 43 / 45%);
+        opacity: .1;
+        border-color: #65462b;
+        opacity: .5;
+    }
+    .alo-circle-fill {
+      animation-iteration-count: infinite;
+      animation-duration: 1s;
+      animation-fill-mode: both;
+      animation-name: pulse;
+        width: 60px;
+        height: 60px;
+        top: -2px;
+        right: -8px;
+        position: absolute;
+        -webkit-transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        -ms-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+        -webkit-border-radius: 100%;
+        -moz-border-radius: 100%;
+        border-radius: 100%;
+        border: 2px solid transparent;
+        background-color: rgba(101 70 43 / 45%);
+        opacity: .75;
+    }
+    .call-icon:hover > span, .mes:hover > span, .sms:hover > span, .zalo:hover > span{display: block}
+    .social-button a span {
+        border-radius: 2px;
+        text-align: center;
+        background: rgb(173 114 63);
+        padding: 9px;
+        display: none;
+        width: 180px;
+        margin-left: 10px;
+        position: absolute;
+        color: #ffffff;
+        z-index: 999;
+        top: 9px;
+        left: 40px;
+        transition: all 0.2s ease-in-out 0s;
+        -moz-animation: headerAnimation 0.7s 1;
+        -webkit-animation: headerAnimation 0.7s 1;
+        -o-animation: headerAnimation 0.7s 1;
+        animation: headerAnimation 0.7s 1;
+    }
+    @-webkit-keyframes "headerAnimation" {
+        0% { margin-top: -70px; }
+        100% { margin-top: 0; }
+    }
+    @keyframes "headerAnimation" {
+        0% { margin-top: -70px; }
+        100% { margin-top: 0; }
+    }
+    .social-button a span:before {
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent rgb(173 114 63) transparent transparent;
+      position: absolute;
+      left: -10px;
+      top: 10px;
+    }
+  </style>
+
+  <script>
+  $(document).ready(function(){
+    $('.user-support').click(function(event) {
+      $('.social-button-content').slideToggle();
+    });
+    });
+</script>
+
+
 <?php use App\menu; ?>
 <div id="offcanvas" class="uk-offcanvas offcanvas">
   <div class="uk-offcanvas-bar">

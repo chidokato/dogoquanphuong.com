@@ -11,12 +11,12 @@
         <input type="text" class="form-control mr-3" name="datefilter" value="{{ isset($datefilter) ? $datefilter : '' }}" placeholder='Created at ...' />
         <select name="sort_by" class="form-control mr-3">
             <option value="">Classify</option>
-            <option value="Main menu">Main menu</option>
-            <option value="Product menu">Product menu</option>
-            <option value="Menu top">Menu top</option>
-            <option value="Main botton">Main botton</option>
-            <option value="Mobile menu">Mobile menu</option>
-            <option value="Category mobile homes">Category mobile homes</option>
+            <option <?php if(isset($sort_by) && $sort_by=='Main menu'){echo "selected";} ?> value="Main menu">Main menu</option>
+            <option <?php if(isset($sort_by) && $sort_by=='Product menu'){echo "selected";} ?> value="Product menu">Product menu</option>
+            <option <?php if(isset($sort_by) && $sort_by=='Menu top'){echo "selected";} ?> value="Menu top">Menu top</option>
+            <option <?php if(isset($sort_by) && $sort_by=='Main botton'){echo "selected";} ?> value="Main botton">Main botton</option>
+            <option <?php if(isset($sort_by) && $sort_by=='Mobile menu'){echo "selected";} ?> value="Mobile menu">Mobile menu</option>
+            <option <?php if(isset($sort_by) && $sort_by=='Category mobile homes'){echo "selected";} ?> value="Category mobile homes">Category mobile homes</option>
         </select>
         <select style="width: 100px;" class="form-control mr-3" name="paginate">
             <option <?php if(isset($paginate) && $paginate=='50'){echo "selected";} ?> value="50">50</option>

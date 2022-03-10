@@ -42,6 +42,7 @@ class c_menu extends Controller
             'key'=>$Request->key,
             'datefilter'=>$Request->datefilter,
             'paginate'=>$Request->paginate,
+            'sort_by'=>$Request->sort_by,
         ]);
     }
 

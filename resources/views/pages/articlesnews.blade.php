@@ -35,7 +35,7 @@
           </section>
         </div>
         <div class="uk-width-large-1-4 menu-left uk-visible-large">
-          ádasd
+          @include('layout.sidebar_pro')
         </div>
       </div>
 

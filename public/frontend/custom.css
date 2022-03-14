@@ -296,7 +296,7 @@ margin: 18px 0 18px 0;
     justify-content: flex-start;
     /*flex-direction: row;*/
 }.ditail-img li img {
-    height: 200px;
+    /*height: 200px;*/
 }
 
 .lib-grid-20>* {

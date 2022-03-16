@@ -55,7 +55,7 @@
               <h3 class="heading"><span>Giới thiệu</span></h3>
             </header>
             <section class="panel-body">
-              <div class="title" style="color:#fff !important;"><p><font color="#545454" face="arial, sans-serif" size="2">Đồ gỗ Quân Phương là đơn vị thiết kế và xản suất đồ gỗ nguyên khối hàng đầu của miền Bắc, luôn lấy được sự hài lòng và thiện cảm tuyệt đối từ khách hàng ...</font></p>
+              <div class="title" style="color:#fff !important;"><p><font color="#545454" face="arial, sans-serif" size="2">Đồ gỗ Quân Phương là đơn vị thiết kế và sản xuất đồ gỗ nguyên khối hàng đầu của miền Bắc, luôn lấy được sự hài lòng và thiện cảm tuyệt đối từ khách hàng ...</font></p>
 </div>
               
             </section>

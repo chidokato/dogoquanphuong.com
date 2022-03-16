@@ -231,6 +231,13 @@
       left: -10px;
       top: 10px;
     }
+    .footer .upper .site-link a {
+    font-size: 1.1rem;
+}
+.ft-subscribe *{font-size: 1.1rem;}
+.ft-contact .list li {
+    font-size: 1.1rem;
+}
   </style>
 
   <script>

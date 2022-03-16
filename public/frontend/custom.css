@@ -311,13 +311,11 @@ margin: 18px 0 18px 0;
     right: 5%;
     width: 90%;}
 
-
-
-
-
-
-
-
-
-
+}
+.footer .upper .site-link a {
+    font-size: 1.1rem;
+}
+.ft-subscribe *{font-size: 1.1rem;}
+.ft-contact .list li {
+    font-size: 1.1rem;
 }

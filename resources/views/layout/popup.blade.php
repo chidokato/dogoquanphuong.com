@@ -2,11 +2,13 @@
 <div onclick="cart()" id="bgblackcart" class="bgblack"></div>
 <div id="myDIV" class="form">
   <div class="title">TƯ VẤN SẢN PHẨM</div>
-  <form method="post" action="gui-form">
+  <form method="post" action="dang-ky">
+    <input type="hidden" name="_token" value="{{csrf_token()}}" />
+    <input type="hidden" name="link" value="<?php echo 'http://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI']; ?>" />
     <p>Tôi muốn tư vấn sản phẩm này, vui lòng liên hệ với tôi theo số điện thoại bên dưới</p>
     <input type="text" name="phone" placeholder="số điện thoại ...">
       <div class="contact-info">
-      <button>GỬI ĐI</button>
+      <button type="submit">GỬI ĐI</button>
       </div>
   </form>
   <div onclick="myFunction()" class="close">x</div>
@@ -14,13 +16,15 @@
 
 <div id="cart" class="form">
   <div class="title">ĐẶT HÀNG NGAY</div>
-  <form method="post" action="dat-hang">
+  <form method="post" action="dang-ky">
+    <input type="hidden" name="_token" value="{{csrf_token()}}" />
+            <input type="hidden" name="link" value="<?php echo 'http://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI']; ?>" />
     <p>Tôi muốn tư vấn sản phẩm này, vui lòng liên hệ với tôi theo số điện thoại bên dưới</p>
     <input type="text" name="name" placeholder="Họ & Tên ...">
     <input type="text" name="phone" placeholder="số điện thoại ...">
     <textarea rows="3" name="content" placeholder="Ghi chú ..."></textarea>
       <div class="contact-info">
-      <button>GỬI ĐI</button>
+      <button type="submit">GỬI ĐI</button>
       </div>
   </form>
   <div onclick="cart()" class="close">x</div>

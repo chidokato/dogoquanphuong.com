@@ -200,8 +200,8 @@ class c_frontend extends Controller
 		$date = date('m/d/Y h:i:s', time());
         
         Mail::send('email_feedback', array('name'=>$name,'phone'=>$phone,'email'=>$email,'link'=>$link,'content'=>$content,'date'=>$date) , function($message) use ($mail){
-            $message->from($mail, 'hado.charmvillas.org');
-            $message->to($mail, 'hado.charmvillas.org')->subject('Thông tin khách hàng');
+            $message->from($mail, 'dogoquanphuong.com');
+            $message->to($mail, 'dogoquanphuong.com')->subject('Thông tin khách hàng');
         });
         //return view('pages.camon')->with('Alerts','Gửi thành công');
 		return redirect('/')->with('Alerts','Thành công');

@@ -4,10 +4,10 @@
     </header>
     <section class="panel-body">
         <form class="dangky" action="dang-ky" method="POST">
-			<input type="hidden" name="_token" value="">
-			<input type="hidden" name="link" value="">
+			<input type="hidden" name="_token" value="{{csrf_token()}}" />
+            <input type="hidden" name="link" value="<?php echo 'http://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI']; ?>" />
             <input type="text" name="name" placeholder="Nhập tên">
-            <input required="" type="tel" name="tel" placeholder="Nhập số điện thoại (*)">
+            <input required="" type="tel" name="phone" placeholder="Nhập số điện thoại (*)">
             <input type="mail" name="email" placeholder="Nhập email">
             <input type="submit" name="btlsubmit" value="ĐĂNG KÝ">
         </form>

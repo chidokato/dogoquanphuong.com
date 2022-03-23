@@ -37,9 +37,9 @@
                 <div class="uk-width-large-1-2">
                   <div class="prd-desc">
                     <h1 class="prd-title"><span>{{$articles->name}}</span></h1>
-                    <div class="price">Giá: Liên hệ</div>
-                    <p>Kích thước: 2x5m</p>
-                    <p>Sản phẩm gồm: 1 bàn 6 ghế</p>
+                    <div class="price">Giá: {{ $articles->product->price ? $articles->product->price : "Liên hệ" }}</div>
+                    <p>Kích thước: {{ $articles->product->size ? $articles->product->size : "..." }}</p>
+                    <p>Sản phẩm gồm: {{ $articles->product->include ? $articles->product->include : "..." }}</p>
                     <!-- <div class="description">
                         <p style="text-align: justify;">Gỗ công nghiệp là một trong số những chất liệu nội thất được nhiều người ưa chuộng bởi vẻ đẹp và chất lượng của nó. <strong>Tủ bếp gỗ công nghiệp đẹp</strong> của GleeHome có thiết kế hiện đại, tiện nghi và vô cùng sang trọng. <strong>Tủ bếp gỗ công nghiệp đẹp </strong>của chúng tôi còn là sản phẩm có chất lượng cao hứa hẹn sẽ là sự lựa chọn hoàn hảo cho phòng bếp gia đình.<br /></p>
                     </div> -->

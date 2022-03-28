@@ -74,7 +74,7 @@
                             <td>
                                 <label class="container"><input <?php if($val->status == 'true'){echo "checked";} ?> type="checkbox" id='status' ><span class="checkmark"></span></label>
                             </td>
-                            <td>{{ $val->category->name }}</td>
+                            <td>{{ $val->category_id ? $val->category->name : "" }}</td>
                             <td>{{ isset($val->user->name) ? $val->user->name : '' }}</td>
                             <td>
                                 <!-- {{date('d/m/Y',strtotime($val->updated_at))}} <br>  -->

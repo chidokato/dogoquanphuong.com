@@ -15,6 +15,7 @@
               <ul class="uk-list list">
                 <li class="location">{{$head_setting->address}}</li>
                 <li class="phone"><a href="tel: {{$head_setting->hotline}}" title="Hotline">{{$head_setting->hotline}}</a></li>
+                <li class="phone"><a href="tel: {{$head_setting->hotline1}}" title="Hotline">{{$head_setting->hotline1}}</a></li>
                 <li class="email"><a href="mailto: Minhtk1730@gmail.com" title="Email">{{$head_setting->email}}</a></li>
               </ul>
             </section>

@@ -69,7 +69,7 @@
                                 {!! isset($val->img) ? '<img data-action="zoom" src="data/product/'.$val->img.'" />' : '' !!}
                             </td>
                             <td>
-                                {{$val->name}}
+                                <a href="admin/product/edit/{{$val->id}}">{{$val->name}}</a>
                             </td>
                             <td>
                                 <label class="container"><input <?php if($val->status == 'true'){echo "checked";} ?> type="checkbox" id='status' ><span class="checkmark"></span></label>
